@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #121317; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #4f8dff; color: #ffffff; }
+  a { color: #4f8dff; text-decoration: none; }
+  a:hover { color: #7aa8ff; }
+</style>
+</helmet>
+
+<div style="background:#121317; font-family:'IBM Plex Sans',system-ui,sans-serif; color:#e7e8ea; padding-bottom:120px;">
+
+  <!-- ============ COVER ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:110px 80px 70px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:64px;">
+      <div style="width:11px; height:11px; border-radius:50%; background:#4f8dff; box-shadow:0 0 18px #4f8dff;"></div>
+      <span style="font-family:'Space Grotesk'; font-weight:600; letter-spacing:0.14em; font-size:14px;">POSEFORGE</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b6e76; margin-left:8px;">design direction — ideation board</span>
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:26px;">Rethinking the workspace · Jul 2026</div>
+    <h1 style="font-family:'Space Grotesk'; font-weight:600; font-size:78px; line-height:0.98; letter-spacing:-0.03em; margin:0 0 28px; max-width:14ch;">Reforge the workspace.</h1>
+    <p style="font-size:20px; line-height:1.6; color:#9b9ea6; max-width:640px; margin:0 0 48px;">
+      Today the app is three panels of buttons fighting for attention around a viewport. This board proposes one clear spatial idea — <span style="color:#e7e8ea;">Process on the left, a pure interactive Stage in the center, References on the right</span> — plus a reworked pose editor, an iterative pipeline that keeps every version, and a calmer visual system that steps away from orange.
+    </p>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9b9ea6; border:1px solid rgba(255,255,255,0.1); border-radius:999px; padding:8px 14px;">01 · Spatial model</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9b9ea6; border:1px solid rgba(255,255,255,0.1); border-radius:999px; padding:8px 14px;">02 · Workspace shell</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9b9ea6; border:1px solid rgba(255,255,255,0.1); border-radius:999px; padding:8px 14px;">03 · Color &amp; type</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9b9ea6; border:1px solid rgba(255,255,255,0.1); border-radius:999px; padding:8px 14px;">04 · The stage &amp; pose editor</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9b9ea6; border:1px solid rgba(255,255,255,0.1); border-radius:999px; padding:8px 14px;">05 · Iterative pipeline</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9b9ea6; border:1px solid rgba(255,255,255,0.1); border-radius:999px; padding:8px 14px;">06 · References &amp; generate</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9b9ea6; border:1px solid rgba(255,255,255,0.1); border-radius:999px; padding:8px 14px;">07 · Jobs &amp; light mode</span>
+    </div>
+  </section>
+
+  <!-- ============ ACCENT STUDIES ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:70px 80px; scroll-margin-top:20px;" id="accents">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#9b9ea6; margin-bottom:22px;">Accent studies — pick a signal</div>
+    <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 18px; max-width:22ch;">Same graphite. Six signals.</h2>
+    <p style="font-size:18px; line-height:1.6; color:#9b9ea6; max-width:660px; margin:0 0 44px;">Each swatch is the accent doing its three real jobs — the active pipeline step, the "pose" tool pill, and the Generate button — so you're judging it in context, not as a paint chip. Neutrals never change. Tell me which one (or ask for another hue).</p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+
+      <!-- AZURE -->
+      <div style="background:#1a1c21; border:1px solid rgba(79,141,255,0.55); border-radius:16px; overflow:hidden; box-shadow:0 0 0 3px rgba(79,141,255,0.12);">
+        <div style="padding:18px 20px 14px; display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk'; font-size:17px; font-weight:600; color:#e7e8ea;">Azure</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4f8dff;">#4F8DFF · chosen</span></div>
+        <div style="display:flex; height:6px; margin:0 20px 16px; border-radius:4px; overflow:hidden;"><div style="flex:2; background:#4f8dff;"></div><div style="flex:1; background:rgba(79,141,255,0.4);"></div><div style="flex:1; background:rgba(79,141,255,0.16);"></div></div>
+        <div style="padding:0 20px 20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; gap:10px; align-items:center; padding:10px 12px; border-radius:11px; background:rgba(79,141,255,0.1); border:1px solid rgba(79,141,255,0.4);"><div style="width:20px; height:20px; border-radius:50%; background:#4f8dff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#fff; font-weight:700; flex:none;">4</div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#e7e8ea; flex:1;">Mesh &amp; rig</span><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#4f8dff;">62%</span></div>
+          <div style="display:flex; gap:5px;"><div style="padding:5px 11px; border-radius:8px; background:#4f8dff; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#fff;">pose</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">orbit</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">pan</div></div>
+          <div style="height:36px; border-radius:10px; background:#4f8dff; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-size:13px; font-weight:600; color:#fff;">Generate</div>
+        </div>
+      </div>
+
+      <!-- IRIS -->
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; overflow:hidden;">
+        <div style="padding:18px 20px 14px; display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk'; font-size:17px; font-weight:600; color:#e7e8ea;">Iris</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76;">#8B7BFF</span></div>
+        <div style="display:flex; height:6px; margin:0 20px 16px; border-radius:4px; overflow:hidden;"><div style="flex:2; background:#8b7bff;"></div><div style="flex:1; background:rgba(139,123,255,0.4);"></div><div style="flex:1; background:rgba(139,123,255,0.16);"></div></div>
+        <div style="padding:0 20px 20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; gap:10px; align-items:center; padding:10px 12px; border-radius:11px; background:rgba(139,123,255,0.1); border:1px solid rgba(139,123,255,0.4);"><div style="width:20px; height:20px; border-radius:50%; background:#8b7bff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#fff; font-weight:700; flex:none;">4</div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#e7e8ea; flex:1;">Mesh &amp; rig</span><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#a99bff;">62%</span></div>
+          <div style="display:flex; gap:5px;"><div style="padding:5px 11px; border-radius:8px; background:#8b7bff; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#fff;">pose</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">orbit</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">pan</div></div>
+          <div style="height:36px; border-radius:10px; background:#8b7bff; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-size:13px; font-weight:600; color:#fff;">Generate</div>
+        </div>
+      </div>
+
+      <!-- AQUA -->
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; overflow:hidden;">
+        <div style="padding:18px 20px 14px; display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk'; font-size:17px; font-weight:600; color:#e7e8ea;">Aqua</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76;">#2FD4C4</span></div>
+        <div style="display:flex; height:6px; margin:0 20px 16px; border-radius:4px; overflow:hidden;"><div style="flex:2; background:#2fd4c4;"></div><div style="flex:1; background:rgba(47,212,196,0.4);"></div><div style="flex:1; background:rgba(47,212,196,0.16);"></div></div>
+        <div style="padding:0 20px 20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; gap:10px; align-items:center; padding:10px 12px; border-radius:11px; background:rgba(47,212,196,0.1); border:1px solid rgba(47,212,196,0.4);"><div style="width:20px; height:20px; border-radius:50%; background:#2fd4c4; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#052722; font-weight:700; flex:none;">4</div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#e7e8ea; flex:1;">Mesh &amp; rig</span><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#2fd4c4;">62%</span></div>
+          <div style="display:flex; gap:5px;"><div style="padding:5px 11px; border-radius:8px; background:#2fd4c4; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#052722;">pose</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">orbit</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">pan</div></div>
+          <div style="height:36px; border-radius:10px; background:#2fd4c4; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-size:13px; font-weight:600; color:#052722;">Generate</div>
+        </div>
+      </div>
+
+      <!-- FUCHSIA -->
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; overflow:hidden;">
+        <div style="padding:18px 20px 14px; display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk'; font-size:17px; font-weight:600; color:#e7e8ea;">Fuchsia</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76;">#F45BB0</span></div>
+        <div style="display:flex; height:6px; margin:0 20px 16px; border-radius:4px; overflow:hidden;"><div style="flex:2; background:#f45bb0;"></div><div style="flex:1; background:rgba(244,91,176,0.4);"></div><div style="flex:1; background:rgba(244,91,176,0.16);"></div></div>
+        <div style="padding:0 20px 20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; gap:10px; align-items:center; padding:10px 12px; border-radius:11px; background:rgba(244,91,176,0.1); border:1px solid rgba(244,91,176,0.4);"><div style="width:20px; height:20px; border-radius:50%; background:#f45bb0; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#2e0a1e; font-weight:700; flex:none;">4</div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#e7e8ea; flex:1;">Mesh &amp; rig</span><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#f45bb0;">62%</span></div>
+          <div style="display:flex; gap:5px;"><div style="padding:5px 11px; border-radius:8px; background:#f45bb0; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#2e0a1e;">pose</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">orbit</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">pan</div></div>
+          <div style="height:36px; border-radius:10px; background:#f45bb0; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-size:13px; font-weight:600; color:#2e0a1e;">Generate</div>
+        </div>
+      </div>
+
+      <!-- CORAL -->
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; overflow:hidden;">
+        <div style="padding:18px 20px 14px; display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk'; font-size:17px; font-weight:600; color:#e7e8ea;">Coral</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76;">#FF6B6B</span></div>
+        <div style="display:flex; height:6px; margin:0 20px 16px; border-radius:4px; overflow:hidden;"><div style="flex:2; background:#ff6b6b;"></div><div style="flex:1; background:rgba(255,107,107,0.4);"></div><div style="flex:1; background:rgba(255,107,107,0.16);"></div></div>
+        <div style="padding:0 20px 20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; gap:10px; align-items:center; padding:10px 12px; border-radius:11px; background:rgba(255,107,107,0.1); border:1px solid rgba(255,107,107,0.4);"><div style="width:20px; height:20px; border-radius:50%; background:#ff6b6b; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#fff; font-weight:700; flex:none;">4</div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#e7e8ea; flex:1;">Mesh &amp; rig</span><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#ff6b6b;">62%</span></div>
+          <div style="display:flex; gap:5px;"><div style="padding:5px 11px; border-radius:8px; background:#ff6b6b; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#fff;">pose</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">orbit</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">pan</div></div>
+          <div style="height:36px; border-radius:10px; background:#ff6b6b; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-size:13px; font-weight:600; color:#fff;">Generate</div>
+        </div>
+      </div>
+
+      <!-- CHARTREUSE (current) -->
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; overflow:hidden; position:relative;">
+        <div style="position:absolute; top:14px; right:20px; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#6b6e76; border:1px solid rgba(255,255,255,0.12); border-radius:5px; padding:2px 6px;">PREVIOUS</div>
+        <div style="padding:18px 20px 14px; display:flex; align-items:baseline; justify-content:space-between;"><span style="font-family:'Space Grotesk'; font-size:17px; font-weight:600; color:#e7e8ea;">Chartreuse</span></div>
+        <div style="display:flex; height:6px; margin:0 20px 16px; border-radius:4px; overflow:hidden;"><div style="flex:2; background:#c8f24a;"></div><div style="flex:1; background:rgba(200,242,74,0.4);"></div><div style="flex:1; background:rgba(200,242,74,0.16);"></div></div>
+        <div style="padding:0 20px 20px; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; gap:10px; align-items:center; padding:10px 12px; border-radius:11px; background:rgba(200,242,74,0.1); border:1px solid rgba(200,242,74,0.4);"><div style="width:20px; height:20px; border-radius:50%; background:#c8f24a; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#1b2109; font-weight:700; flex:none;">4</div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#e7e8ea; flex:1;">Mesh &amp; rig</span><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#c8f24a;">62%</span></div>
+          <div style="display:flex; gap:5px;"><div style="padding:5px 11px; border-radius:8px; background:#c8f24a; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#1b2109;">pose</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">orbit</div><div style="padding:5px 11px; border-radius:8px; background:#26282e; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">pan</div></div>
+          <div style="height:36px; border-radius:10px; background:#c8f24a; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-size:13px; font-weight:600; color:#1b2109;">Generate</div>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b6e76; margin:26px 0 0;">my lean: <span style="color:#4f8dff;">Azure</span> reads most "pro 3D tool", <span style="color:#2fd4c4;">Aqua</span> feels closest to the mid-gray stage, <span style="color:#8b7bff;">Iris</span> leans gen-AI. Want warmer? I can pull a burnt-red or a gold that isn't amber.</p>
+  </section>
+
+  <!-- ============ 01 · THE PROBLEM ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:70px 80px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">01 — Why it feels off</div>
+    <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 40px; max-width:20ch;">The panels don't tell you what they're for.</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:26px;">
+        <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:600; margin-bottom:10px; color:#e7e8ea;">Everything is a button</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#9b9ea6; margin:0;">Source, Extract, Sheet, Mesh, Rig, Generate, Refine — a wall of amber buttons at the same weight. Nothing signals what to do next.</p>
+      </div>
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:26px;">
+        <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:600; margin-bottom:10px; color:#e7e8ea;">Mixed responsibilities</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#9b9ea6; margin:0;">The right rail does bone controls <em style="color:#c9cbd0; font-style:normal;">and</em> generation <em style="color:#c9cbd0; font-style:normal;">and</em> jobs. Inputs, controls and outputs are all tangled together.</p>
+      </div>
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:26px;">
+        <div style="font-family:'Space Grotesk'; font-size:15px; font-weight:600; margin-bottom:10px; color:#e7e8ea;">The stage is passive</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#9b9ea6; margin:0;">Posing happens through a bone dropdown and three sliders in a side panel — never by touching the character you're looking at.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · SPATIAL MODEL ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:70px 80px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">02 — The spatial model</div>
+    <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 18px; max-width:18ch;">One idea, three zones.</h2>
+    <p style="font-size:18px; line-height:1.6; color:#9b9ea6; max-width:640px; margin:0 0 48px;">Every pixel earns a role. The left tells you <em style="font-style:normal; color:#c9cbd0;">where you are</em>. The center is <em style="font-style:normal; color:#c9cbd0;">what you're working on</em> — nothing but the visual, fully interactive. The right holds <em style="font-style:normal; color:#c9cbd0;">what you're working with</em>.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1.7fr 1.15fr; gap:16px; height:400px;">
+      <!-- LEFT zone -->
+      <div style="position:relative; background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:18px; padding:24px; display:flex; flex-direction:column;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#6b6e76;">LEFT</span>
+        <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:600; margin-top:8px; color:#e7e8ea;">Process</div>
+        <p style="font-size:13.5px; line-height:1.55; color:#9b9ea6; margin:14px 0 0;">What you're doing. The build pipeline as a living spine — steps, status, versions.</p>
+        <div style="margin-top:auto; display:flex; flex-direction:column; gap:9px;">
+          <div style="height:9px; width:70%; border-radius:5px; background:#4f8dff;"></div>
+          <div style="height:9px; width:52%; border-radius:5px; background:#33363d;"></div>
+          <div style="height:9px; width:60%; border-radius:5px; background:#33363d;"></div>
+        </div>
+      </div>
+      <!-- CENTER zone -->
+      <div style="position:relative; background:radial-gradient(120% 120% at 50% 30%, #2a2d34 0%, #16181d 78%); border:1px solid rgba(255,255,255,0.09); border-radius:18px; padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+        <span style="position:absolute; top:20px; left:24px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#8a8d95;">CENTER</span>
+        <svg viewBox="0 0 120 200" width="86" height="150" style="opacity:0.9;">
+          <g stroke="#c3c6cd" stroke-width="5" stroke-linecap="round" fill="none">
+            <line x1="60" y1="52" x2="60" y2="118"/>
+            <line x1="60" y1="70" x2="30" y2="98"/>
+            <line x1="60" y1="70" x2="92" y2="86"/>
+            <line x1="60" y1="118" x2="42" y2="170"/>
+            <line x1="60" y1="118" x2="82" y2="168"/>
+          </g>
+          <circle cx="60" cy="34" r="16" fill="#c3c6cd"/>
+          <ellipse cx="92" cy="86" rx="20" ry="9" fill="none" stroke="#f2503c" stroke-width="2.5" opacity="0.9"/>
+          <circle cx="92" cy="86" r="6" fill="#f2503c"/>
+        </svg>
+        <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:600; margin-top:20px; color:#e7e8ea;">Stage</div>
+        <p style="font-size:13.5px; line-height:1.55; color:#9b9ea6; margin:10px 0 0; text-align:center; max-width:24ch;">Only the visual. Pose by dragging the character directly — no prompts, no buttons in the frame.</p>
+      </div>
+      <!-- RIGHT zone -->
+      <div style="position:relative; background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:18px; padding:24px; display:flex; flex-direction:column;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#6b6e76;">RIGHT</span>
+        <div style="font-family:'Space Grotesk'; font-size:26px; font-weight:600; margin-top:8px; color:#e7e8ea;">References</div>
+        <p style="font-size:13.5px; line-height:1.55; color:#9b9ea6; margin:14px 0 0;">What you're working with. Inputs, pose &amp; face libraries, prompts — the things you feed the stage.</p>
+        <div style="margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <div style="aspect-ratio:1; border-radius:8px; background:#26282e; border:1px solid rgba(255,255,255,0.06);"></div>
+          <div style="aspect-ratio:1; border-radius:8px; background:#26282e; border:1px solid rgba(255,255,255,0.06);"></div>
+          <div style="aspect-ratio:1; border-radius:8px; background:#26282e; border:1px solid rgba(255,255,255,0.06);"></div>
+          <div style="aspect-ratio:1; border-radius:8px; background:#26282e; border:1px solid rgba(255,255,255,0.06);"></div>
+        </div>
+      </div>
+    </div>
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#6b6e76; margin:22px 0 0; text-align:center;">inputs flow left → right into the stage &nbsp;·&nbsp; results flow back out to references</p>
+  </section>
+
+  <!-- ============ 03 · COLOR & TYPE ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:70px 80px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">03 — The visual system</div>
+    <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 18px; max-width:20ch;">Cool graphite, one electric signal.</h2>
+    <p style="font-size:18px; line-height:1.6; color:#9b9ea6; max-width:660px; margin:0 0 48px;">Amber reads a little "Anthropic". We move to a neutral cool-graphite base — which also lets the mid-gray 3D stage sit naturally in the frame — with a single high-voltage <span style="color:#4f8dff;">azure signal</span> reserved for the one action that matters right now, and a warm <span style="color:#f2503c;">vermilion</span> only for live selection in the viewport.</p>
+
+    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:20px; margin-bottom:20px;">
+      <!-- palette -->
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:26px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#6b6e76; margin-bottom:18px;">DARK — NEUTRALS + SIGNAL</div>
+        <div style="display:flex; gap:0; border-radius:10px; overflow:hidden; margin-bottom:14px;">
+          <div style="flex:1; height:64px; background:#121317;"></div>
+          <div style="flex:1; height:64px; background:#1a1c21;"></div>
+          <div style="flex:1; height:64px; background:#26282e;"></div>
+          <div style="flex:1; height:64px; background:#33363d;"></div>
+          <div style="flex:1; height:64px; background:#6b6e76;"></div>
+          <div style="flex:1; height:64px; background:#9b9ea6;"></div>
+          <div style="flex:1; height:64px; background:#e7e8ea;"></div>
+        </div>
+        <div style="display:flex; gap:12px;">
+          <div style="flex:1; height:64px; border-radius:10px; background:#4f8dff; display:flex; align-items:flex-end; padding:8px 10px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#ffffff;">#4F8DFF signal</span></div>
+          <div style="flex:1; height:64px; border-radius:10px; background:#f2503c; display:flex; align-items:flex-end; padding:8px 10px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#ffffff;">#F2503C select</span></div>
+        </div>
+      </div>
+      <!-- type -->
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:26px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#6b6e76; margin-bottom:18px;">TYPE</div>
+        <div style="font-family:'Space Grotesk'; font-size:38px; font-weight:600; letter-spacing:-0.02em; line-height:1; color:#e7e8ea;">Space Grotesk</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b6e76; margin:6px 0 20px;">display · titles · wordmark</div>
+        <div style="font-family:'IBM Plex Sans'; font-size:19px; font-weight:400; line-height:1.4; color:#c9cbd0;">IBM Plex Sans — the working body voice for labels, values and copy.</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b6e76; margin:8px 0 20px;">body · UI</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:15px; color:#9b9ea6;">IBM Plex Mono — 0.14em</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b6e76; margin-top:6px;">kickers · metadata · numbers</div>
+      </div>
+    </div>
+    <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:22px 26px; display:flex; align-items:center; gap:20px;">
+      <div style="width:8px; height:8px; border-radius:50%; background:#4f8dff; flex:none;"></div>
+      <p style="font-size:14.5px; line-height:1.55; color:#9b9ea6; margin:0;"><span style="color:#e7e8ea; font-weight:500;">Signal discipline.</span> Only one azure element is on screen at a time — the primary next action. Everything else is neutral. That single rule is what fixes the "wall of buttons" and rebuilds hierarchy.</p>
+    </div>
+  </section>
+
+  <!-- ============ 04 · WORKSPACE SHELL ============ -->
+  <section style="max-width:1360px; margin:0 auto; padding:70px 60px;">
+    <div style="max-width:1240px; margin:0 auto 40px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">04 — The reimagined shell</div>
+      <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 18px; max-width:20ch;">Process · Stage · References.</h2>
+      <p style="font-size:18px; line-height:1.6; color:#9b9ea6; max-width:660px; margin:0;">The full workspace, annotated. Notice the stage carries no buttons or prompts — controls float, and only when you need them.</p>
+    </div>
+
+    <!-- MOCKUP FRAME -->
+    <div style="background:#0e0f12; border:1px solid rgba(255,255,255,0.09); border-radius:20px; overflow:hidden; box-shadow:0 40px 90px -30px rgba(0,0,0,0.8);">
+      <!-- top bar -->
+      <div style="display:flex; align-items:center; gap:14px; padding:14px 20px; border-bottom:1px solid rgba(255,255,255,0.07); background:#131418;">
+        <div style="display:flex; align-items:center; gap:9px;">
+          <div style="width:9px; height:9px; border-radius:50%; background:#4f8dff; box-shadow:0 0 12px #4f8dff;"></div>
+          <span style="font-family:'Space Grotesk'; font-weight:600; font-size:13px; letter-spacing:0.1em;">POSEFORGE</span>
+        </div>
+        <div style="width:1px; height:16px; background:rgba(255,255,255,0.1);"></div>
+        <span style="font-family:'IBM Plex Sans'; font-size:13px; color:#9b9ea6;">Ronin project</span>
+        <span style="color:#4a4d54;">/</span>
+        <span style="font-family:'IBM Plex Sans'; font-size:13px; color:#e7e8ea;">Character 1</span>
+        <div style="margin-left:auto; display:flex; align-items:center; gap:10px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76;">1 job running</span>
+          <div style="width:24px; height:24px; border-radius:7px; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size:11px; color:#9b9ea6;">i</div>
+          <div style="width:24px; height:24px; border-radius:7px; background:#26282e; border:1px solid rgba(255,255,255,0.08);"></div>
+        </div>
+      </div>
+
+      <!-- body -->
+      <div style="display:grid; grid-template-columns:262px 1fr 320px; height:560px;">
+        <!-- LEFT · PROCESS -->
+        <div style="border-right:1px solid rgba(255,255,255,0.07); background:#131418; padding:20px 18px; display:flex; flex-direction:column; gap:6px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.18em; color:#6b6e76; margin-bottom:10px;">PROCESS</div>
+          <!-- step done -->
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px; background:transparent;">
+            <div style="width:22px; height:22px; border-radius:50%; background:#26282e; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size:12px; color:#7fd35f; flex:none;">✓</div>
+            <div style="flex:1;">
+              <div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#c9cbd0;">Source</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6b6e76; margin-top:2px;">2 versions</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px;">
+            <div style="width:22px; height:22px; border-radius:50%; background:#26282e; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size:12px; color:#7fd35f; flex:none;">✓</div>
+            <div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#c9cbd0;">Extract</div><div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6b6e76; margin-top:2px;">1 version</div></div>
+          </div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px;">
+            <div style="width:22px; height:22px; border-radius:50%; background:#26282e; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size:12px; color:#7fd35f; flex:none;">✓</div>
+            <div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#c9cbd0;">Character sheet</div><div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6b6e76; margin-top:2px;">3 views</div></div>
+          </div>
+          <!-- current step -->
+          <div style="display:flex; gap:12px; padding:13px 12px; border-radius:11px; background:#16243f; border:1px solid rgba(79,141,255,0.35);">
+            <div style="width:22px; height:22px; border-radius:50%; background:#4f8dff; display:flex; align-items:center; justify-content:center; font-size:11px; color:#ffffff; flex:none; font-weight:700;">4</div>
+            <div style="flex:1;">
+              <div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#e7e8ea; font-weight:500;">3D mesh &amp; rig</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#4f8dff; margin-top:3px;">meshing… 62%</div>
+              <div style="height:4px; border-radius:3px; background:#33363d; margin-top:7px; overflow:hidden;"><div style="width:62%; height:100%; background:#4f8dff;"></div></div>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px; opacity:0.5;">
+            <div style="width:22px; height:22px; border-radius:50%; border:1px dashed rgba(255,255,255,0.18); flex:none;"></div>
+            <div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#9b9ea6;">Pose</div></div>
+          </div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px; opacity:0.5;">
+            <div style="width:22px; height:22px; border-radius:50%; border:1px dashed rgba(255,255,255,0.18); flex:none;"></div>
+            <div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#9b9ea6;">Generate</div></div>
+          </div>
+          <div style="margin-top:auto; padding-top:14px; border-top:1px solid rgba(255,255,255,0.06);">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6b6e76;">the spine is re-runnable — every step keeps its versions</div>
+          </div>
+        </div>
+
+        <!-- CENTER · STAGE -->
+        <div style="position:relative; background:radial-gradient(130% 130% at 50% 32%, #33363d 0%, #17191e 76%); display:flex; align-items:center; justify-content:center;">
+          <!-- grid floor hint -->
+          <div style="position:absolute; bottom:0; left:0; right:0; height:38%; background:linear-gradient(transparent, rgba(0,0,0,0.35)); pointer-events:none;"></div>
+          <!-- mannequin -->
+          <svg viewBox="0 0 200 320" width="150" height="240">
+            <g stroke="#c9ccd3" stroke-width="7" stroke-linecap="round" fill="none">
+              <line x1="100" y1="84" x2="100" y2="188"/>
+              <line x1="100" y1="110" x2="52" y2="150"/>
+              <line x1="52" y1="150" x2="40" y2="205"/>
+              <line x1="100" y1="110" x2="150" y2="140"/>
+              <line x1="150" y1="140" x2="176" y2="185"/>
+              <line x1="100" y1="188" x2="72" y2="272"/>
+              <line x1="100" y1="188" x2="132" y2="270"/>
+            </g>
+            <circle cx="100" cy="56" r="24" fill="#c9ccd3"/>
+            <!-- selection gizmo on right shoulder -->
+            <ellipse cx="150" cy="140" rx="34" ry="15" fill="none" stroke="#f2503c" stroke-width="3"/>
+            <ellipse cx="150" cy="140" rx="15" ry="34" fill="none" stroke="#f2503c" stroke-width="3" opacity="0.55"/>
+            <circle cx="150" cy="140" r="8" fill="#f2503c"/>
+            <circle cx="184" cy="140" r="6" fill="#f2503c"/>
+          </svg>
+          <!-- floating top-right minimal controls -->
+          <div style="position:absolute; top:16px; right:16px; display:flex; gap:6px;">
+            <div style="height:30px; padding:0 12px; border-radius:9px; background:rgba(20,22,26,0.7); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">Reset view</div>
+          </div>
+          <!-- floating bottom tool dock -->
+          <div style="position:absolute; bottom:18px; left:50%; transform:translateX(-50%); display:flex; gap:4px; padding:5px; border-radius:14px; background:rgba(18,20,24,0.72); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1);">
+            <div style="width:38px; height:34px; border-radius:9px; background:transparent; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">orbit</div>
+            <div style="width:38px; height:34px; border-radius:9px; background:#4f8dff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#ffffff;">pose</div>
+            <div style="width:38px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">pan</div>
+            <div style="width:1px; height:20px; align-self:center; background:rgba(255,255,255,0.12); margin:0 3px;"></div>
+            <div style="width:38px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6;">bones</div>
+          </div>
+          <span style="position:absolute; top:16px; left:18px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.16em; color:#8a8d95;">STAGE</span>
+        </div>
+
+        <!-- RIGHT · REFERENCES -->
+        <div style="border-left:1px solid rgba(255,255,255,0.07); background:#131418; display:flex; flex-direction:column;">
+          <div style="display:flex; gap:4px; padding:14px 16px 0;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#e7e8ea; padding:6px 10px; border-radius:8px; background:#26282e;">Poses</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76; padding:6px 10px;">Faces</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76; padding:6px 10px;">Inputs</div>
+          </div>
+          <div style="padding:16px; display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <div style="aspect-ratio:1; border-radius:11px; background:#1e2025; border:1px solid rgba(79,141,255,0.4); display:flex; align-items:center; justify-content:center;">
+              <svg viewBox="0 0 100 100" width="42" height="42" stroke="#4f8dff" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="34" x2="50" y2="60"/><line x1="50" y1="40" x2="34" y2="54"/><line x1="50" y1="40" x2="66" y2="52"/><line x1="50" y1="60" x2="40" y2="82"/><line x1="50" y1="60" x2="62" y2="82"/><circle cx="50" cy="24" r="8" fill="#4f8dff" stroke="none"/></svg>
+            </div>
+            <div style="aspect-ratio:1; border-radius:11px; background:#1e2025; border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center;">
+              <svg viewBox="0 0 100 100" width="42" height="42" stroke="#6b6e76" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="32" x2="50" y2="58"/><line x1="50" y1="38" x2="30" y2="40"/><line x1="50" y1="38" x2="70" y2="40"/><line x1="50" y1="58" x2="38" y2="82"/><line x1="50" y1="58" x2="62" y2="82"/><circle cx="50" cy="22" r="8" fill="#6b6e76" stroke="none"/></svg>
+            </div>
+            <div style="aspect-ratio:1; border-radius:11px; background:#1e2025; border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center;">
+              <svg viewBox="0 0 100 100" width="42" height="42" stroke="#6b6e76" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="34" x2="42" y2="60"/><line x1="50" y1="40" x2="66" y2="30"/><line x1="42" y1="60" x2="36" y2="82"/><line x1="42" y1="60" x2="58" y2="80"/><circle cx="50" cy="24" r="8" fill="#6b6e76" stroke="none"/></svg>
+            </div>
+            <div style="aspect-ratio:1; border-radius:11px; background:#1e2025; border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center;">
+              <svg viewBox="0 0 100 100" width="42" height="42" stroke="#6b6e76" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="36" x2="50" y2="62"/><line x1="50" y1="42" x2="66" y2="58"/><line x1="50" y1="42" x2="34" y2="58"/><line x1="50" y1="62" x2="50" y2="84"/><circle cx="50" cy="26" r="8" fill="#6b6e76" stroke="none"/></svg>
+            </div>
+          </div>
+          <div style="margin-top:auto; border-top:1px solid rgba(255,255,255,0.07); padding:16px;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6b6e76; margin-bottom:10px;">GENERATE FROM THIS POSE</div>
+            <div style="background:#1e2025; border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:10px 12px; font-family:'IBM Plex Sans'; font-size:12.5px; color:#9b9ea6; line-height:1.5;">cinematic key light, rain-soaked alley, katana drawn…</div>
+            <div style="display:flex; gap:8px; align-items:center; margin-top:10px;">
+              <div style="flex:1; height:36px; border-radius:10px; background:#4f8dff; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-size:13px; font-weight:600; color:#ffffff;">Generate</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b6e76;">~$0.04</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- annotation row -->
+    <div style="display:grid; grid-template-columns:262px 1fr 320px; gap:0; max-width:none; margin-top:18px;">
+      <div style="padding-right:20px;"><div style="height:2px; background:linear-gradient(90deg,#4f8dff,transparent); margin-bottom:12px;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4f8dff; margin-bottom:6px;">LEFT</div><p style="font-size:13px; line-height:1.55; color:#9b9ea6; margin:0;">The pipeline becomes a spine. Status, progress and version counts live here — the "what do I do next" answer is always the lime step.</p></div>
+      <div style="padding:0 20px;"><div style="height:2px; background:linear-gradient(90deg,#f2503c,transparent); margin-bottom:12px;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#f2503c; margin-bottom:6px;">CENTER</div><p style="font-size:13px; line-height:1.55; color:#9b9ea6; margin:0;">Pure stage. No panels bolted to it — a floating tool dock and a single reset chip. The vermilion gizmo is a directly draggable joint.</p></div>
+      <div style="padding-left:20px;"><div style="height:2px; background:linear-gradient(90deg,#9b9ea6,transparent); margin-bottom:12px;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9b9ea6; margin-bottom:6px;">RIGHT</div><p style="font-size:13px; line-height:1.55; color:#9b9ea6; margin:0;">Everything you feed the stage: pose &amp; face libraries, inputs, and the generate prompt — the one place text and buttons belong.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · POSE EDITOR ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:70px 80px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">05 — The pose editor, fixed</div>
+    <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 18px; max-width:22ch;">Grab the joint. Refine with numbers.</h2>
+    <p style="font-size:18px; line-height:1.6; color:#9b9ea6; max-width:680px; margin:0 0 48px;">The dropdown-plus-three-sliders flow survives as a <em style="font-style:normal; color:#c9cbd0;">refinement</em> tool — but posing starts by clicking a joint on the character and dragging its gizmo. Coarse by hand, exact by number.</p>
+
+    <div style="display:grid; grid-template-columns:1.4fr 1fr; gap:20px; align-items:stretch;">
+      <!-- direct manipulation demo -->
+      <div style="background:radial-gradient(120% 120% at 45% 35%, #2c2f36 0%, #16181d 78%); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:28px; position:relative; min-height:400px; display:flex; align-items:center; justify-content:center;">
+        <span style="position:absolute; top:18px; left:20px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.16em; color:#8a8d95;">DIRECT MANIPULATION</span>
+        <svg viewBox="0 0 220 340" width="180" height="278">
+          <g stroke="#c9ccd3" stroke-width="7" stroke-linecap="round" fill="none">
+            <line x1="110" y1="90" x2="110" y2="196"/>
+            <line x1="110" y1="116" x2="64" y2="150"/>
+            <line x1="64" y1="150" x2="52" y2="208"/>
+            <line x1="110" y1="116" x2="150" y2="152"/>
+            <line x1="150" y1="152" x2="188" y2="128"/>
+            <line x1="110" y1="196" x2="82" y2="284"/>
+            <line x1="110" y1="196" x2="140" y2="282"/>
+          </g>
+          <circle cx="110" cy="60" r="24" fill="#c9ccd3"/>
+          <!-- draggable elbow gizmo -->
+          <ellipse cx="150" cy="152" rx="40" ry="17" fill="none" stroke="#f2503c" stroke-width="3.5"/>
+          <ellipse cx="150" cy="152" rx="17" ry="40" fill="none" stroke="#f2503c" stroke-width="3.5" opacity="0.5"/>
+          <circle cx="150" cy="152" r="9" fill="#f2503c"/>
+          <!-- drag handle + cursor -->
+          <circle cx="188" cy="128" r="8" fill="#f2503c"/>
+          <path d="M188 128 q22 -6 34 4" stroke="#f2503c" stroke-width="2" stroke-dasharray="3 4" fill="none" opacity="0.7"/>
+          <path d="M224 132 l14 4 -6 3 3 8 -4 2 -4 -8 -5 4 z" fill="#e7e8ea"/>
+        </svg>
+        <div style="position:absolute; bottom:24px; left:50%; transform:translateX(-50%); font-family:'IBM Plex Mono',monospace; font-size:11px; color:#f2503c; background:rgba(18,20,24,0.7); border:1px solid rgba(95,211,216,0.3); padding:6px 12px; border-radius:8px;">R.Forearm · drag to rotate</div>
+      </div>
+      <!-- numeric refine panel -->
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:18px; padding:26px; display:flex; flex-direction:column;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.16em; color:#6b6e76; margin-bottom:18px;">REFINE · R.FOREARM</div>
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#9b9ea6;">Rotate X</span><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#e7e8ea;">42°</span></div>
+            <div style="height:6px; border-radius:4px; background:#33363d; position:relative;"><div style="position:absolute; left:0; top:0; bottom:0; width:62%; background:#f2503c; border-radius:4px;"></div><div style="position:absolute; left:62%; top:50%; width:16px; height:16px; margin:-8px 0 0 -8px; border-radius:50%; background:#e7e8ea;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#9b9ea6;">Rotate Y</span><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#e7e8ea;">-8°</span></div>
+            <div style="height:6px; border-radius:4px; background:#33363d; position:relative;"><div style="position:absolute; left:0; top:0; bottom:0; width:47%; background:#f2503c; border-radius:4px;"></div><div style="position:absolute; left:47%; top:50%; width:16px; height:16px; margin:-8px 0 0 -8px; border-radius:50%; background:#e7e8ea;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#9b9ea6;">Rotate Z</span><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#e7e8ea;">15°</span></div>
+            <div style="height:6px; border-radius:4px; background:#33363d; position:relative;"><div style="position:absolute; left:0; top:0; bottom:0; width:54%; background:#f2503c; border-radius:4px;"></div><div style="position:absolute; left:54%; top:50%; width:16px; height:16px; margin:-8px 0 0 -8px; border-radius:50%; background:#e7e8ea;"></div></div>
+          </div>
+        </div>
+        <div style="margin-top:auto; padding-top:22px; display:flex; gap:8px;">
+          <div style="flex:1; height:34px; border-radius:9px; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Sans'; font-size:12.5px; color:#9b9ea6;">Mirror ⇋</div>
+          <div style="flex:1; height:34px; border-radius:9px; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Sans'; font-size:12.5px; color:#9b9ea6;">Reset joint</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:20px;">
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:22px;"><div style="font-family:'Space Grotesk'; font-size:15px; font-weight:600; color:#e7e8ea; margin-bottom:8px;">Click selects, drag rotates</div><p style="font-size:13.5px; line-height:1.55; color:#9b9ea6; margin:0;">The selected bone shows a rotation gizmo on the model. Same bone syncs the numeric panel — two views of one truth.</p></div>
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:22px;"><div style="font-family:'Space Grotesk'; font-size:15px; font-weight:600; color:#e7e8ea; margin-bottom:8px;">Numbers for precision</div><p style="font-size:13.5px; line-height:1.55; color:#9b9ea6; margin:0;">Once it "clicks," the XYZ readout is great for exact, repeatable angles and mirroring left↔right limbs.</p></div>
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:22px;"><div style="font-family:'Space Grotesk'; font-size:15px; font-weight:600; color:#e7e8ea; margin-bottom:8px;">Symmetry &amp; snap</div><p style="font-size:13.5px; line-height:1.55; color:#9b9ea6; margin:0;">Mirror a pose across the body, snap to 15° increments — small helpers that make hand-posing feel professional.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · ITERATIVE PIPELINE ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:70px 80px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">06 — Iterative by design</div>
+    <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 18px; max-width:22ch;">Every step keeps its versions.</h2>
+    <p style="font-size:18px; line-height:1.6; color:#9b9ea6; max-width:680px; margin:0 0 44px;">Generation is a slot machine — you re-roll. So each object in the pipeline holds <em style="font-style:normal; color:#c9cbd0;">a stack of assets</em>, not a single result. Pick a source, re-mesh from it, compare two rigs, promote the winner. Nothing is destroyed.</p>
+
+    <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:18px; padding:30px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.16em; color:#6b6e76; margin-bottom:18px;">CHARACTER SHEET · 3 GENERATIONS</div>
+      <div style="display:flex; gap:14px; overflow:hidden;">
+        <!-- selected version -->
+        <div style="width:150px; flex:none;">
+          <div style="aspect-ratio:3/4; border-radius:12px; background:#26282e; border:2px solid #4f8dff; display:flex; align-items:center; justify-content:center; position:relative;">
+            <svg viewBox="0 0 100 130" width="60" height="78" stroke="#c9ccd3" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="42" x2="50" y2="80"/><line x1="50" y1="50" x2="30" y2="52"/><line x1="50" y1="50" x2="70" y2="52"/><line x1="50" y1="80" x2="38" y2="112"/><line x1="50" y1="80" x2="62" y2="112"/><circle cx="50" cy="28" r="11" fill="#c9ccd3" stroke="none"/></svg>
+            <div style="position:absolute; top:8px; left:8px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#ffffff; background:#4f8dff; padding:3px 7px; border-radius:6px;">active</div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#9b9ea6; margin-top:8px;">v3 · 3 views</div>
+        </div>
+        <!-- other versions -->
+        <div style="width:150px; flex:none; opacity:0.8;">
+          <div style="aspect-ratio:3/4; border-radius:12px; background:#26282e; border:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center;">
+            <svg viewBox="0 0 100 130" width="60" height="78" stroke="#7f8289" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="42" x2="50" y2="80"/><line x1="50" y1="50" x2="32" y2="46"/><line x1="50" y1="50" x2="68" y2="46"/><line x1="50" y1="80" x2="40" y2="112"/><line x1="50" y1="80" x2="60" y2="112"/><circle cx="50" cy="28" r="11" fill="#7f8289" stroke="none"/></svg>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b6e76; margin-top:8px;">v2 · 3 views</div>
+        </div>
+        <div style="width:150px; flex:none; opacity:0.8;">
+          <div style="aspect-ratio:3/4; border-radius:12px; background:#26282e; border:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center;">
+            <svg viewBox="0 0 100 130" width="60" height="78" stroke="#7f8289" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="42" x2="50" y2="80"/><line x1="50" y1="50" x2="28" y2="58"/><line x1="50" y1="50" x2="72" y2="58"/><line x1="50" y1="80" x2="42" y2="112"/><line x1="50" y1="80" x2="58" y2="112"/><circle cx="50" cy="28" r="11" fill="#7f8289" stroke="none"/></svg>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b6e76; margin-top:8px;">v1 · 1 view</div>
+        </div>
+        <!-- re-roll -->
+        <div style="width:150px; flex:none;">
+          <div style="aspect-ratio:3/4; border-radius:12px; border:1px dashed rgba(255,255,255,0.18); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+            <div style="width:34px; height:34px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; font-size:18px; color:#9b9ea6;">↺</div>
+            <span style="font-family:'IBM Plex Sans'; font-size:12px; color:#9b9ea6;">Re-roll sheet</span>
+          </div>
+        </div>
+      </div>
+      <p style="font-family:'IBM Plex Sans'; font-size:13.5px; line-height:1.55; color:#9b9ea6; margin:22px 0 0; max-width:70ch;">The <span style="color:#4f8dff;">active</span> version is what flows downstream. Change it and the steps below know they're stale — a subtle "re-run to update" cue appears, never an auto-wipe. This is the "store multiple assets per object" model made visible.</p>
+    </div>
+  </section>
+
+  <!-- ============ 07 · JOBS ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:70px 80px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">07 — Jobs, made ambient</div>
+    <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 18px; max-width:22ch;">Work happens in the background, quietly.</h2>
+    <p style="font-size:18px; line-height:1.6; color:#9b9ea6; max-width:680px; margin:0 0 44px;">Meshy and Veo take minutes. Jobs shouldn't own a whole panel — they collapse into a status pill in the top bar, expandable into a tray. Progress also shows <em style="font-style:normal; color:#c9cbd0;">in place</em>, right on the pipeline step it belongs to.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:24px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.16em; color:#6b6e76; margin-bottom:16px;">STATUS PILL → TRAY</div>
+        <div style="display:flex; align-items:center; gap:9px; background:#26282e; border:1px solid rgba(255,255,255,0.08); border-radius:999px; padding:7px 14px; width:fit-content; margin-bottom:16px;">
+          <div style="width:8px; height:8px; border-radius:50%; background:#4f8dff; box-shadow:0 0 10px #4f8dff;"></div>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#e7e8ea;">1 running</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b6e76;">· 2 done</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; align-items:center; gap:12px; background:#26282e; border-radius:10px; padding:11px 13px;"><div style="width:7px; height:7px; border-radius:50%; background:#4f8dff; flex:none;"></div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#e7e8ea; flex:1;">Mesh · Meshy</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4f8dff;">62%</span></div>
+          <div style="display:flex; align-items:center; gap:12px; background:#26282e; border-radius:10px; padding:11px 13px;"><div style="width:7px; height:7px; border-radius:50%; background:#7fd35f; flex:none;"></div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#9b9ea6; flex:1;">Character sheet</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76;">done</span></div>
+          <div style="display:flex; align-items:center; gap:12px; background:#26282e; border-radius:10px; padding:11px 13px;"><div style="width:7px; height:7px; border-radius:50%; background:#7fd35f; flex:none;"></div><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#9b9ea6; flex:1;">Extract</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6b6e76;">done</span></div>
+        </div>
+      </div>
+      <div style="background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:24px; display:flex; flex-direction:column; justify-content:center; gap:18px;">
+        <div style="display:flex; gap:14px;"><div style="width:26px; height:26px; border-radius:8px; background:#16243f; border:1px solid rgba(79,141,255,0.35); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#4f8dff; flex:none;">1</div><p style="font-size:14px; line-height:1.55; color:#9b9ea6; margin:0;"><span style="color:#e7e8ea; font-weight:500;">Survives reload.</span> A job with a provider task ID resumes polling on reopen — the pill just reappears mid-progress.</p></div>
+        <div style="display:flex; gap:14px;"><div style="width:26px; height:26px; border-radius:8px; background:#16243f; border:1px solid rgba(79,141,255,0.35); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#4f8dff; flex:none;">2</div><p style="font-size:14px; line-height:1.55; color:#9b9ea6; margin:0;"><span style="color:#e7e8ea; font-weight:500;">Never blocks.</span> You keep posing and browsing libraries while a mesh cooks. Results land as a new version on the right object.</p></div>
+        <div style="display:flex; gap:14px;"><div style="width:26px; height:26px; border-radius:8px; background:#16243f; border:1px solid rgba(79,141,255,0.35); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#4f8dff; flex:none;">3</div><p style="font-size:14px; line-height:1.55; color:#9b9ea6; margin:0;"><span style="color:#e7e8ea; font-weight:500;">Cost up front.</span> Each job carries its estimate; the tray totals the session so BYO-key spend is never a surprise.</p></div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ============ 08 · LIGHT MODE ============ -->
+  <section style="max-width:1360px; margin:0 auto; padding:70px 60px;">
+    <div style="max-width:1240px; margin:0 auto 40px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">08 — Light mode</div>
+      <h2 style="font-family:'Space Grotesk'; font-weight:600; font-size:46px; line-height:1.04; letter-spacing:-0.02em; margin:0 0 18px; max-width:22ch;">Same bones, daylight.</h2>
+      <p style="font-size:18px; line-height:1.6; color:#9b9ea6; max-width:660px; margin:0;">The graphite softens to a warm cream-gray — nothing is stark white, so it's easy on the eyes for long sessions. The stage lightens too, to a soft neutral studio gray (kept neutral so the captured render stays clean). Azure holds as the signal.</p>
+    </div>
+
+    <div style="background:#e5e2da; border:1px solid #d3cfc4; border-radius:20px; overflow:hidden; box-shadow:0 40px 90px -30px rgba(55,50,40,0.35);">
+      <div style="display:flex; align-items:center; gap:14px; padding:14px 20px; border-bottom:1px solid #d3cfc4; background:#efece5;">
+        <div style="display:flex; align-items:center; gap:9px;"><div style="width:9px; height:9px; border-radius:50%; background:#4f8dff;"></div><span style="font-family:'Space Grotesk'; font-weight:600; font-size:13px; letter-spacing:0.1em; color:#2b2a25;">POSEFORGE</span></div>
+        <div style="width:1px; height:16px; background:#d3cfc4;"></div>
+        <span style="font-family:'IBM Plex Sans'; font-size:13px; color:#6a675e;">Ronin project</span><span style="color:#b8b4a8;">/</span><span style="font-family:'IBM Plex Sans'; font-size:13px; color:#2b2a25;">Character 1</span>
+        <div style="margin-left:auto; display:flex; align-items:center; gap:10px;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#97948a;">1 job running</span><div style="width:24px; height:24px; border-radius:7px; background:#e2ddd2;"></div></div>
+      </div>
+      <div style="display:grid; grid-template-columns:262px 1fr 320px; height:420px;">
+        <!-- left -->
+        <div style="border-right:1px solid #d3cfc4; background:#eae7df; padding:20px 18px; display:flex; flex-direction:column; gap:6px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.18em; color:#97948a; margin-bottom:10px;">PROCESS</div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px;"><div style="width:22px; height:22px; border-radius:50%; background:#e2ddd2; display:flex; align-items:center; justify-content:center; font-size:12px; color:#4a8b3a; flex:none;">✓</div><div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#4a473f;">Source</div></div></div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px;"><div style="width:22px; height:22px; border-radius:50%; background:#e2ddd2; display:flex; align-items:center; justify-content:center; font-size:12px; color:#4a8b3a; flex:none;">✓</div><div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#4a473f;">Extract</div></div></div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px;"><div style="width:22px; height:22px; border-radius:50%; background:#e2ddd2; display:flex; align-items:center; justify-content:center; font-size:12px; color:#4a8b3a; flex:none;">✓</div><div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#4a473f;">Character sheet</div></div></div>
+          <div style="display:flex; gap:12px; padding:13px 12px; border-radius:11px; background:#dfe8fb; border:1px solid #a9c4f5;"><div style="width:22px; height:22px; border-radius:50%; background:#4f8dff; display:flex; align-items:center; justify-content:center; font-size:11px; color:#fff; flex:none; font-weight:700;">4</div><div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#2b2a25; font-weight:500;">3D mesh &amp; rig</div><div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#3a6fd0; margin-top:3px;">meshing… 62%</div><div style="height:4px; border-radius:3px; background:#d3cfc4; margin-top:7px; overflow:hidden;"><div style="width:62%; height:100%; background:#4f8dff;"></div></div></div></div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px; opacity:0.6;"><div style="width:22px; height:22px; border-radius:50%; border:1px dashed #c6c2b6; flex:none;"></div><div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#97948a;">Pose</div></div></div>
+          <div style="display:flex; gap:12px; padding:11px 12px; border-radius:11px; opacity:0.6;"><div style="width:22px; height:22px; border-radius:50%; border:1px dashed #c6c2b6; flex:none;"></div><div style="flex:1;"><div style="font-family:'IBM Plex Sans'; font-size:13.5px; color:#97948a;">Generate</div></div></div>
+        </div>
+        <!-- center · lighter studio-gray stage -->
+        <div style="position:relative; background:radial-gradient(130% 130% at 50% 32%, #d6d3ca 0%, #bfbcb2 78%); display:flex; align-items:center; justify-content:center;">
+          <div style="position:absolute; bottom:0; left:0; right:0; height:34%; background:linear-gradient(transparent, rgba(90,84,70,0.12)); pointer-events:none;"></div>
+          <svg viewBox="0 0 200 320" width="130" height="208">
+            <g stroke="#6d6a61" stroke-width="7" stroke-linecap="round" fill="none"><line x1="100" y1="84" x2="100" y2="188"/><line x1="100" y1="110" x2="52" y2="150"/><line x1="52" y1="150" x2="40" y2="205"/><line x1="100" y1="110" x2="150" y2="140"/><line x1="150" y1="140" x2="176" y2="185"/><line x1="100" y1="188" x2="72" y2="272"/><line x1="100" y1="188" x2="132" y2="270"/></g>
+            <circle cx="100" cy="56" r="24" fill="#6d6a61"/>
+            <ellipse cx="150" cy="140" rx="30" ry="13" fill="none" stroke="#d83a26" stroke-width="3"/><circle cx="150" cy="140" r="7" fill="#d83a26"/>
+          </svg>
+          <div style="position:absolute; bottom:16px; left:50%; transform:translateX(-50%); display:flex; gap:4px; padding:5px; border-radius:12px; background:rgba(255,255,255,0.72); backdrop-filter:blur(10px); border:1px solid rgba(90,84,70,0.14);"><div style="width:36px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6a675e;">orbit</div><div style="width:36px; height:30px; border-radius:8px; background:#4f8dff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#fff;">pose</div><div style="width:36px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#6a675e;">pan</div></div>
+          <span style="position:absolute; top:16px; left:18px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.16em; color:#8a8780;">STAGE</span>
+        </div>
+        <!-- right -->
+        <div style="border-left:1px solid #d3cfc4; background:#eae7df; display:flex; flex-direction:column;">
+          <div style="display:flex; gap:4px; padding:14px 16px 0;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#2b2a25; padding:6px 10px; border-radius:8px; background:#e2ddd2;">Poses</div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#97948a; padding:6px 10px;">Faces</div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#97948a; padding:6px 10px;">Inputs</div></div>
+          <div style="padding:16px; display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <div style="aspect-ratio:1; border-radius:11px; background:#f6f4ee; border:1px solid #a9c4f5; box-shadow:0 0 0 1px #a9c4f5; display:flex; align-items:center; justify-content:center;"><svg viewBox="0 0 100 100" width="38" height="38" stroke="#4f8dff" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="34" x2="50" y2="60"/><line x1="50" y1="40" x2="34" y2="54"/><line x1="50" y1="40" x2="66" y2="52"/><line x1="50" y1="60" x2="40" y2="82"/><line x1="50" y1="60" x2="62" y2="82"/><circle cx="50" cy="24" r="8" fill="#4f8dff" stroke="none"/></svg></div>
+            <div style="aspect-ratio:1; border-radius:11px; background:#f6f4ee; border:1px solid #d3cfc4; display:flex; align-items:center; justify-content:center;"><svg viewBox="0 0 100 100" width="38" height="38" stroke="#a9a69c" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="32" x2="50" y2="58"/><line x1="50" y1="38" x2="30" y2="40"/><line x1="50" y1="38" x2="70" y2="40"/><line x1="50" y1="58" x2="38" y2="82"/><line x1="50" y1="58" x2="62" y2="82"/><circle cx="50" cy="22" r="8" fill="#a9a69c" stroke="none"/></svg></div>
+            <div style="aspect-ratio:1; border-radius:11px; background:#f6f4ee; border:1px solid #d3cfc4; display:flex; align-items:center; justify-content:center;"><svg viewBox="0 0 100 100" width="38" height="38" stroke="#a9a69c" stroke-width="4" stroke-linecap="round" fill="none"><line x1="50" y1="34" x2="42" y2="60"/><line x1="50" y1="40" x2="66" y2="30"/><line x1="42" y1="60" x2="36" y2="82"/><line x1="42" y1="60" x2="58" y2="80"/><circle cx="50" cy="24" r="8" fill="#a9a69c" stroke="none"/></svg></div>
+            <div style="aspect-ratio:1; border-radius:11px; background:#f6f4ee; border:1px solid #d3cfc4;"></div>
+          </div>
+          <div style="margin-top:auto; border-top:1px solid #d3cfc4; padding:16px;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#97948a; margin-bottom:10px;">GENERATE FROM THIS POSE</div>
+            <div style="background:#f6f4ee; border:1px solid #d3cfc4; border-radius:10px; padding:10px 12px; font-family:'IBM Plex Sans'; font-size:12.5px; color:#6a675e; line-height:1.5;">cinematic key light, rain-soaked alley…</div>
+            <div style="display:flex; gap:8px; align-items:center; margin-top:10px;"><div style="flex:1; height:36px; border-radius:10px; background:#4f8dff; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-size:13px; font-weight:600; color:#fff;">Generate</div><span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#97948a;">~$0.04</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ============ PRINCIPLES ============ -->
+  <section style="max-width:1240px; margin:0 auto; padding:70px 80px 40px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#4f8dff; margin-bottom:22px;">The rules we're designing to</div>
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:18px;">
+      <div style="display:flex; gap:16px; padding:24px; background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px;"><span style="font-family:'Space Grotesk'; font-size:22px; font-weight:600; color:#4f8dff;">01</span><div><div style="font-family:'Space Grotesk'; font-size:16px; font-weight:600; margin-bottom:6px;">Zones have jobs</div><p style="font-size:14px; line-height:1.55; color:#9b9ea6; margin:0;">Process left, Stage center, References right — and nothing crosses over.</p></div></div>
+      <div style="display:flex; gap:16px; padding:24px; background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px;"><span style="font-family:'Space Grotesk'; font-size:22px; font-weight:600; color:#4f8dff;">02</span><div><div style="font-family:'Space Grotesk'; font-size:16px; font-weight:600; margin-bottom:6px;">One signal at a time</div><p style="font-size:14px; line-height:1.55; color:#9b9ea6; margin:0;">A single lime element points at the next action. Hierarchy for free.</p></div></div>
+      <div style="display:flex; gap:16px; padding:24px; background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px;"><span style="font-family:'Space Grotesk'; font-size:22px; font-weight:600; color:#4f8dff;">03</span><div><div style="font-family:'Space Grotesk'; font-size:16px; font-weight:600; margin-bottom:6px;">Touch what you see</div><p style="font-size:14px; line-height:1.55; color:#9b9ea6; margin:0;">Pose on the model first; numbers are for precision, not primary input.</p></div></div>
+      <div style="display:flex; gap:16px; padding:24px; background:#1a1c21; border:1px solid rgba(255,255,255,0.07); border-radius:16px;"><span style="font-family:'Space Grotesk'; font-size:22px; font-weight:600; color:#4f8dff;">04</span><div><div style="font-family:'Space Grotesk'; font-size:16px; font-weight:600; margin-bottom:6px;">Nothing is destroyed</div><p style="font-size:14px; line-height:1.55; color:#9b9ea6; margin:0;">Every step keeps its versions; the active one flows downstream.</p></div></div>
+    </div>
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b6e76; margin:40px 0 0;">Ideation board — no code yet. Next: pick the direction, then wireframe the shell interactions (drag-to-pose feel, version switching, job tray).</p>
+  </section>
+
+</div>
+</x-dc>
+</body>
+</html>

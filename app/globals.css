@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* Design tokens from the workspace redesign (design_handoff §README).
+   Graphite neutral ramp + single azure signal; vermilion reserved for the
+   3D gizmo. Light mode (below) is a variable swap: because Tailwind v4
+   utilities compile to var(--color-*), overriding the ramp under html.light
+   rethemes every bg-/text-/border-neutral utility at once. */
+@theme {
+  /* graphite ramp mapped onto the neutral scale so existing utilities retheme */
+  --color-neutral-950: #121317;
+  --color-neutral-900: #1a1c21;
+  --color-neutral-800: #26282e;
+  --color-neutral-700: #33363d;
+  --color-neutral-600: #4a4d55;
+  --color-neutral-500: #6b6e76;
+  --color-neutral-400: #9b9ea6;
+  --color-neutral-300: #c9cbd0;
+  --color-neutral-200: #e7e8ea;
+  --color-neutral-100: #f1f1f3;
+
+  /* azure — the one signal */
+  --color-azure-950: #101a2e;
+  --color-azure-900: #16243f;
+  --color-azure-800: #1e3357;
+  --color-azure-700: #2b4b85;
+  --color-azure-600: #4f8dff;
+  --color-azure-500: #6ba0ff;
+  --color-azure-400: #85b1ff;
+  --color-azure-300: #a9c4f5;
+  --color-azure-200: #cfe0ff;
+
+  /* vermilion: 3D selection/gizmo ONLY */
+  --color-verm-500: #f2503c;
+  /* success */
+  --color-ok-500: #7fd35f;
+
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", monospace;
+  --font-display: var(--font-grotesk), var(--font-plex-sans), ui-sans-serif, sans-serif;
+}
+
+/* Semantic chrome vars for the few hardcoded surfaces the ramp can't cover:
+   rail/top-bar panels, the floating glass docks, the stage radial, and the
+   hairline dividers (white-on-dark → ink-on-light). Dark values reproduce the
+   originals exactly so dark mode is unchanged; html.light swaps them. */
+:root {
+  --pf-panel: #131418;
+  --pf-glass: rgba(18, 20, 24, 0.72);
+  --pf-stage: radial-gradient(130% 130% at 50% 32%, #33363d, #17191e);
+  --pf-hair: rgba(255, 255, 255, 0.07);
+  --pf-edge: rgba(255, 255, 255, 0.09);
+}
+
+/* Light mode — design_handoff §08 "Light mode". Neutral ramp inverts (light
+   surfaces at low index, ink text at high index); the azure SIGNAL holds, only
+   its dark navy tints flip to light-blue. The 3D canvas backdrop + grid stay
+   neutral (Viewport.tsx) — that render doubles as the generation reference. */
+html.light {
+  color-scheme: light;
+
+  --color-neutral-950: #e5e2da; /* app bg */
+  --color-neutral-900: #ece9e1; /* raised panel */
+  --color-neutral-800: #ded9ce; /* chips / buttons */
+  --color-neutral-700: #d3cfc4; /* borders / hover */
+  --color-neutral-600: #a8a49a; /* faint hint text */
+  --color-neutral-500: #97948a; /* muted text */
+  --color-neutral-400: #6a675e; /* secondary text */
+  --color-neutral-300: #4a473f; /* secondary text */
+  --color-neutral-200: #2b2a25; /* primary text */
+  --color-neutral-100: #1f1e1a; /* strongest text */
+
+  /* azure tinted backgrounds flip light; bright signal (600/500/400/300/200) holds */
+  --color-azure-950: #edf3fe;
+  --color-azure-900: #dfe8fb; /* active step bg */
+  --color-azure-800: #cbddfb;
+
+  --pf-panel: #eae7df;
+  --pf-glass: rgba(240, 238, 231, 0.78);
+  --pf-stage: radial-gradient(130% 130% at 50% 32%, #d6d3ca, #bfbcb2);
+  --pf-hair: rgba(43, 42, 37, 0.1);
+  --pf-edge: rgba(43, 42, 37, 0.16);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-200);
+  font-family: var(--font-sans);
+}
+
+input[type="range"] {
+  accent-color: #4f8dff;
+}
+
+/* subtle pulse for the running-jobs dot */
+@keyframes pf-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.pf-pulse {
+  animation: pf-pulse 1.6s ease-in-out infinite;
+}

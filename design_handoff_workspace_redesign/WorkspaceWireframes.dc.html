@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#efece6;font-family:'IBM Plex Sans',system-ui,sans-serif}
+  .dv-turn{padding:44px 48px 36px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+  .dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 6px}
+  .dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+  .dv-tname{font:600 13px/1.2 'IBM Plex Sans',system-ui,sans-serif;color:#1a1a1a}
+  .dv-sub{font:400 13px/1.4 'IBM Plex Sans',system-ui;color:rgba(0,0,0,.5);margin:0 0 26px;max-width:70ch}
+  .dv-opts{display:flex;flex-wrap:wrap;gap:34px;align-items:flex-start}
+  .dv-opt{flex:none;display:flex;flex-direction:column;gap:11px;scroll-margin-top:16px}
+  .dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+  .dv-olabel{display:flex;align-items:baseline;gap:9px;font:400 12px/1.3 'IBM Plex Sans',system-ui;color:rgba(0,0,0,.55);max-width:720px}
+  .dv-opt:target .dv-oid{background:#4f8dff;color:#fff}
+  .dv-next{margin:26px 0 0;font:13px/1.6 'IBM Plex Sans',system-ui;color:rgba(0,0,0,.5)}
+  .dv-next a{color:#3f6fd0}
+
+  .wf{width:720px;background:#fff;border:1px solid #cbc6bb;border-radius:9px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+  .wf-top{display:flex;align-items:center;gap:8px;padding:9px 13px;border-bottom:1px solid #e6e1d7;background:#faf9f5}
+  .wf-body{display:flex;height:432px}
+  .lbl{font:600 8.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#a29e93;text-transform:uppercase}
+  .note{font:500 16px/1.1 'Caveat',cursive;color:#8a8677}
+  .note.blue{color:#3f6fd0}.note.red{color:#d8452e}
+  .bar{height:7px;border-radius:4px;background:#e3ded3}
+  .step{display:flex;gap:9px;align-items:center;padding:7px 8px;border-radius:8px}
+  .circ{width:17px;height:17px;border-radius:50%;border:1.5px solid #c9c4b8;flex:none;display:flex;align-items:center;justify-content:center;font:600 9px ui-monospace,monospace;color:#a29e93}
+  .tab{font:600 10px ui-monospace,monospace;color:#a29e93;padding:5px 9px;border-radius:6px}
+  .tab.on{background:#ece7dd;color:#4a463d}
+  .thumb{background:#f2efe8;border:1px solid #ddd8cc;border-radius:8px;display:flex;align-items:center;justify-content:center}
+  .btn{height:30px;border-radius:8px;background:#4f8dff;display:flex;align-items:center;justify-content:center;font:600 11px 'IBM Plex Sans';color:#fff}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t2">
+  <div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Project &amp; character states — building on <a class="dv-oid" href="#1a">1a</a></span></div>
+  <p class="dv-sub">Fixed three-column with sides that collapse individually; timeline lives in the bottom deck. These frames cover entering the app, an empty new character, the contextual References logic (Poses/Faces appear only when the pipeline earns them), showing images in the stage, the asset library, the timeline drawer, and a collapsed rail.</p>
+  <div class="dv-opts">
+
+    <!-- 2a launcher -->
+    <div class="dv-opt" id="2a">
+      <div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a><span><b style="color:#3a3733">Starting up — project launcher.</b> Open to your projects; create new or import a <i>.poseforge</i> bundle. Projects then open as tabs across the top.</span></div>
+      <div class="wf" style="width:560px">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="margin-left:auto;width:15px;height:15px;border-radius:5px;border:1px solid #ddd8cc"></div></div>
+        <div style="height:432px;padding:34px 40px;background:#faf9f5;display:flex;flex-direction:column">
+          <div style="font:600 22px 'IBM Plex Sans';color:#3a3733">Your projects</div>
+          <div class="note" style="margin:0 0 22px">pick up where you left off — or forge a new one</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+            <div style="border:1px solid #ddd8cc;border-radius:9px;background:#fff;overflow:hidden"><div class="thumb" style="height:74px;border:0;border-bottom:1px solid #eee7db"></div><div style="padding:9px 11px"><div class="bar" style="width:72%"></div><div class="lbl" style="margin-top:8px">3 characters · 2d</div></div></div>
+            <div style="border:1px solid #ddd8cc;border-radius:9px;background:#fff;overflow:hidden"><div class="thumb" style="height:74px;border:0;border-bottom:1px solid #eee7db"></div><div style="padding:9px 11px"><div class="bar" style="width:55%"></div><div class="lbl" style="margin-top:8px">1 character · 1w</div></div></div>
+            <div style="border:1.5px dashed #c4bfb2;border-radius:9px;background:transparent;display:flex;align-items:center;justify-content:center;min-height:112px;color:#4f8dff;font:600 15px 'Caveat'">+ New project</div>
+          </div>
+          <div style="margin-top:16px;border:1.5px dashed #d6d1c5;border-radius:9px;padding:12px;display:flex;align-items:center;gap:10px;color:#8a8677"><div style="width:15px;height:15px;border-radius:4px;border:1.5px solid #c4bfb2"></div><span class="note" style="font-size:15px">Import a .poseforge bundle…</span></div>
+          <div class="note blue" style="margin-top:auto;align-self:flex-end">opening one → its tabs<br>appear up top ↑</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2b new character -->
+    <div class="dv-opt" id="2b">
+      <div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a><span><b style="color:#3a3733">New character — the empty pipeline.</b> Only <b>Source</b> is live; the stage is a drop target. References shows only <b>Inputs</b>: Poses &amp; Faces are locked until the pipeline reaches them.</span></div>
+      <div class="wf" style="width:680px">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="width:1px;height:12px;background:#e0dbd1;margin:0 4px"></div><div class="tab on" style="font-size:9px">Ronin</div><div class="tab" style="font-size:9px">+</div></div>
+        <div class="wf-body">
+          <div style="width:176px;border-right:1px solid #e6e1d7;background:#faf9f5;padding:11px;display:flex;flex-direction:column;gap:3px">
+            <div style="display:flex;gap:5px;margin-bottom:8px"><div class="tab on" style="border-radius:999px">Char 1</div><div class="tab" style="border-radius:999px">+</div></div>
+            <div class="lbl" style="margin-bottom:5px">Process</div>
+            <div class="step" style="background:#e9f0fd;border:1px solid #bcd2f7"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">1</div><div style="flex:1"><div style="font:600 11px 'IBM Plex Sans';color:#3a3733">Source</div></div></div>
+            <div class="step" style="opacity:.45"><div class="circ" style="border-style:dashed">2</div><div class="bar" style="flex:1"></div></div>
+            <div class="step" style="opacity:.45"><div class="circ" style="border-style:dashed">3</div><div class="bar" style="flex:1"></div></div>
+            <div class="step" style="opacity:.45"><div class="circ" style="border-style:dashed">4</div><div class="bar" style="flex:1"></div></div>
+            <div class="step" style="opacity:.45"><div class="circ" style="border-style:dashed">5</div><div class="bar" style="flex:1"></div></div>
+            <div class="note" style="margin-top:auto">each step lights up<br>as the one before<br>finishes ↑</div>
+          </div>
+          <div style="flex:1;background:#ece9e2;position:relative;display:flex;align-items:center;justify-content:center;padding:22px">
+            <span class="lbl" style="position:absolute;top:11px;left:13px">Stage</span>
+            <div style="width:100%;height:78%;border:2px dashed #c4bfb2;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#8a8677"><div style="width:26px;height:26px;border-radius:7px;border:1.5px solid #b6b1a4"></div><span class="note" style="font-size:16px">drop an image — or describe a character</span></div>
+          </div>
+          <div style="width:190px;border-left:1px solid #e6e1d7;background:#faf9f5;display:flex;flex-direction:column">
+            <div style="display:flex;gap:3px;padding:11px 12px 6px"><div class="tab on">Inputs</div><div class="tab" style="opacity:.35">Poses</div><div class="tab" style="opacity:.35">Faces</div></div>
+            <div style="padding:6px 12px"><div class="note" style="font-size:13px;color:#a29e93">Poses unlock after rig · Faces at generate</div></div>
+            <div style="padding:8px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="thumb" style="height:50px;border-style:dashed;color:#b6b1a4;font:500 13px 'Caveat'">+ add</div><div class="thumb" style="height:50px;border-style:dashed"></div></div>
+            <div style="margin-top:auto;border-top:1px solid #e6e1d7;padding:11px 12px"><div style="height:30px;border-radius:8px;background:#eceae3;border:1px solid #ddd8cc;display:flex;align-items:center;justify-content:center;color:#b6b1a4;font:600 11px 'IBM Plex Sans'">Generate — locked</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2c contextual legend -->
+    <div class="dv-opt" id="2c">
+      <div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a><span><b style="color:#3a3733">Which tools show when.</b> References is contextual — no posing without a skeleton, no faces before generation.</span></div>
+      <div class="wf" style="width:430px">
+        <div class="wf-top"><span class="lbl">References · unlock rules</span></div>
+        <div style="padding:16px 18px;background:#faf9f5;display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:11px"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">1-3</div><div style="width:96px;font:600 11px 'IBM Plex Sans';color:#3a3733">Source→Sheet</div><div style="display:flex;gap:5px"><span class="tab on">Inputs</span></div></div>
+          <div style="height:1px;background:#eee7db"></div>
+          <div style="display:flex;align-items:center;gap:11px"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">4</div><div style="width:96px;font:600 11px 'IBM Plex Sans';color:#3a3733">Mesh &amp; rig done</div><div style="display:flex;gap:5px"><span class="tab on">Inputs</span><span class="tab" style="background:#e9f0fd;color:#3f6fd0">+ Poses</span><span class="tab" style="background:#e9f0fd;color:#3f6fd0">+ Bones</span></div></div>
+          <div style="height:1px;background:#eee7db"></div>
+          <div style="display:flex;align-items:center;gap:11px"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">5</div><div style="width:96px;font:600 11px 'IBM Plex Sans';color:#3a3733">Pose</div><div style="display:flex;gap:5px;flex-wrap:wrap"><span class="tab on">Poses</span><span class="tab on">Bones</span></div></div>
+          <div style="height:1px;background:#eee7db"></div>
+          <div style="display:flex;align-items:center;gap:11px"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">6</div><div style="width:96px;font:600 11px 'IBM Plex Sans';color:#3a3733">Generate</div><div style="display:flex;gap:5px;flex-wrap:wrap"><span class="tab on">Prompt</span><span class="tab" style="background:#fde8e3;color:#d8452e">+ Faces</span></div></div>
+          <div class="note" style="margin-top:6px">tabs slide in as steps complete — the panel is never<br>fuller than the moment needs</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2d image in stage -->
+    <div class="dv-opt" id="2d">
+      <div class="dv-olabel"><a class="dv-oid" href="#2d">2d</a><span><b style="color:#3a3733">Images in the stage.</b> A generation (or a character-sheet view) takes the center; a result filmstrip sits below, with a flip back to 3D. Faces tab is now live.</span></div>
+      <div class="wf" style="width:680px">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="width:1px;height:12px;background:#e0dbd1;margin:0 4px"></div><div class="bar" style="width:60px"></div></div>
+        <div class="wf-body">
+          <div style="width:158px;border-right:1px solid #e6e1d7;background:#faf9f5;padding:11px;display:flex;flex-direction:column;gap:3px">
+            <div class="lbl" style="margin-bottom:5px">Process</div>
+            <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+            <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+            <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+            <div class="step" style="background:#e9f0fd;border:1px solid #bcd2f7"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">6</div><div style="font:600 11px 'IBM Plex Sans';color:#3a3733">Generate</div></div>
+          </div>
+          <div style="flex:1;background:#ece9e2;position:relative;display:flex;flex-direction:column;padding:14px">
+            <div style="display:flex;align-items:center;margin-bottom:10px"><span class="lbl">Stage — result</span><div style="margin-left:auto" class="tab" style="border:1px solid #ddd8cc;background:#fff">↺ back to 3D</div></div>
+            <div style="flex:1;border-radius:10px;background:repeating-linear-gradient(45deg,#dfdbd2,#dfdbd2 9px,#e7e3da 9px,#e7e3da 18px);display:flex;align-items:center;justify-content:center;color:#9a968c" ><span class="note" style="font-size:16px">generated image</span></div>
+            <div style="display:flex;gap:7px;margin-top:10px"><div class="thumb" style="width:52px;height:40px;border-color:#bcd2f7"></div><div class="thumb" style="width:52px;height:40px"></div><div class="thumb" style="width:52px;height:40px"></div><div class="thumb" style="width:52px;height:40px;border-style:dashed;color:#b6b1a4;font:500 13px 'Caveat'">+</div></div>
+          </div>
+          <div style="width:190px;border-left:1px solid #e6e1d7;background:#faf9f5;display:flex;flex-direction:column">
+            <div style="display:flex;gap:3px;padding:11px 12px 6px"><div class="tab">Prompt</div><div class="tab on" style="background:#fde8e3;color:#d8452e">Faces</div></div>
+            <div style="padding:8px 12px;display:grid;grid-template-columns:1fr 1fr;gap:7px"><div class="thumb" style="height:34px;border-color:#f0b6a8;background:#fdf0ec;font:500 12px 'Caveat';color:#d8452e">fierce</div><div class="thumb" style="height:34px;font:500 12px 'Caveat';color:#a29e93">calm</div><div class="thumb" style="height:34px;font:500 12px 'Caveat';color:#a29e93">smirk</div><div class="thumb" style="height:34px;border-style:dashed;color:#b6b1a4;font:500 12px 'Caveat'">+</div></div>
+            <div style="margin-top:auto;border-top:1px solid #e6e1d7;padding:11px 12px;display:flex;flex-direction:column;gap:7px"><div class="btn">Generate</div><div style="height:28px;border-radius:8px;border:1px solid #f0b6a8;color:#d8452e;display:flex;align-items:center;justify-content:center;font:600 10px 'IBM Plex Sans'">Refine face</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2e asset library -->
+    <div class="dv-opt" id="2e">
+      <div class="dv-olabel"><a class="dv-oid" href="#2e">2e</a><span><b style="color:#3a3733">Asset library.</b> Open it and it takes the stage: every content-addressed asset (sources, sheets, meshes, generations) with filters; the right rail inspects the selection.</span></div>
+      <div class="wf" style="width:680px">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="width:1px;height:12px;background:#e0dbd1;margin:0 4px"></div><div class="tab on" style="font-size:9px">Assets</div></div>
+        <div class="wf-body">
+          <div style="width:158px;border-right:1px solid #e6e1d7;background:#faf9f5;padding:11px"><div class="lbl" style="margin-bottom:7px">Process</div><div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div><div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div><div class="step" style="opacity:.5"><div class="circ" style="border-style:dashed"></div><div class="bar" style="flex:1"></div></div></div>
+          <div style="flex:1;background:#f4f2ec;padding:14px;display:flex;flex-direction:column">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:12px"><span style="font:600 13px 'IBM Plex Sans';color:#3a3733">Asset library</span><div style="margin-left:8px;display:flex;gap:5px"><span class="tab on">All</span><span class="tab">Images</span><span class="tab">Meshes</span><span class="tab">Gens</span></div></div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:9px">
+              <div class="thumb" style="height:58px;border-color:#bcd2f7"></div><div class="thumb" style="height:58px"></div><div class="thumb" style="height:58px"></div><div class="thumb" style="height:58px"></div><div class="thumb" style="height:58px"></div><div class="thumb" style="height:58px"></div><div class="thumb" style="height:58px"></div><div class="thumb" style="height:58px"></div>
+            </div>
+          </div>
+          <div style="width:176px;border-left:1px solid #e6e1d7;background:#faf9f5;padding:12px;display:flex;flex-direction:column"><div class="lbl" style="margin-bottom:9px">Inspect</div><div class="thumb" style="height:110px;border-color:#bcd2f7;margin-bottom:10px"></div><div class="bar" style="width:70%;margin-bottom:6px"></div><div class="lbl">mesh · glb · v2</div><div style="margin-top:auto"><div class="btn" style="background:#eceae3;color:#4a463d;border:1px solid #ddd8cc">Use as source</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2f timeline -->
+    <div class="dv-opt" id="2f">
+      <div class="dv-olabel"><a class="dv-oid" href="#2f">2f</a><span><b style="color:#3a3733">Timeline drawer.</b> The bottom deck opens into tracks — pose keyframes (scrub = slerp preview) and a video track (Generate = Veo between keyframes). Stage stays live above.</span></div>
+      <div class="wf" style="width:680px">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="width:1px;height:12px;background:#e0dbd1;margin:0 4px"></div><div class="bar" style="width:60px"></div></div>
+        <div style="display:flex;flex-direction:column;height:432px">
+          <div style="flex:1;display:flex;min-height:0">
+            <div style="width:150px;border-right:1px solid #e6e1d7;background:#faf9f5;padding:11px"><div class="lbl" style="margin-bottom:7px">Process</div><div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div><div class="step" style="background:#e9f0fd;border:1px solid #bcd2f7"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">5</div><div class="bar" style="flex:1;background:#c7d8f7"></div></div></div>
+            <div style="flex:1;background:radial-gradient(120% 130% at 50% 30%,#ece9e2,#dcd8ce);position:relative;display:flex;align-items:center;justify-content:center"><span class="lbl" style="position:absolute;top:10px;left:13px">Stage</span><svg viewBox="0 0 120 200" width="60" height="100"><g stroke="#8f8b81" stroke-width="6" stroke-linecap="round" fill="none"><line x1="60" y1="54" x2="60" y2="118"/><line x1="60" y1="70" x2="34" y2="96"/><line x1="60" y1="70" x2="90" y2="88"/><line x1="60" y1="118" x2="44" y2="168"/><line x1="60" y1="118" x2="80" y2="166"/></g><circle cx="60" cy="36" r="15" fill="#8f8b81"/></svg></div>
+          </div>
+          <div style="height:172px;border-top:1px solid #cbc6bb;background:#faf9f5;display:flex;flex-direction:column">
+            <div style="display:flex;align-items:center;gap:9px;padding:9px 13px;border-bottom:1px solid #e6e1d7"><span style="font:600 11px 'IBM Plex Sans';color:#3a3733">Timeline</span><div style="width:22px;height:22px;border-radius:6px;background:#4f8dff;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px">▶</div><div class="lbl" style="margin-left:auto">00:00 · 00:06 ▾</div></div>
+            <div style="padding:11px 13px;display:flex;flex-direction:column;gap:9px;position:relative">
+              <div style="position:absolute;top:6px;bottom:6px;left:112px;width:2px;background:#f2503c"></div>
+              <div style="display:flex;align-items:center;gap:10px"><span class="lbl" style="width:52px">Poses</span><div style="flex:1;height:26px;border-radius:6px;background:#eceae3;border:1px solid #ddd8cc;position:relative"><div style="position:absolute;left:12%;top:50%;transform:translate(-50%,-50%) rotate(45deg);width:12px;height:12px;background:#4f8dff"></div><div style="position:absolute;left:42%;top:50%;transform:translate(-50%,-50%) rotate(45deg);width:12px;height:12px;background:#4f8dff"></div><div style="position:absolute;left:78%;top:50%;transform:translate(-50%,-50%) rotate(45deg);width:12px;height:12px;background:#4f8dff"></div></div></div>
+              <div style="display:flex;align-items:center;gap:10px"><span class="lbl" style="width:52px">Video</span><div style="flex:1;height:26px;border-radius:6px;background:#eceae3;border:1px solid #ddd8cc;display:flex;gap:3px;padding:3px"><div style="width:30%;background:#d6d1c5;border-radius:3px"></div><div style="width:34%;border:1.5px dashed #b6b1a4;border-radius:3px;display:flex;align-items:center;justify-content:center;color:#a29e93;font:500 11px 'Caveat'">Veo →</div></div></div>
+              <div class="note blue" style="position:absolute;right:14px;bottom:-2px">keyframes interpolate<br>for preview</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2g collapsed rail -->
+    <div class="dv-opt" id="2g">
+      <div class="dv-olabel"><a class="dv-oid" href="#2g">2g</a><span><b style="color:#3a3733">Collapse a side.</b> Either rail folds to an icon strip independently — that's your <a class="dv-oid" href="#1b">1b</a> immersion, on demand. Here the right rail is collapsed; stage gains the room.</span></div>
+      <div class="wf" style="width:680px">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="width:1px;height:12px;background:#e0dbd1;margin:0 4px"></div><div class="bar" style="width:60px"></div></div>
+        <div class="wf-body">
+          <div style="width:176px;border-right:1px solid #e6e1d7;background:#faf9f5;padding:11px;display:flex;flex-direction:column;gap:3px">
+            <div style="display:flex;align-items:center;margin-bottom:5px"><span class="lbl">Process</span><div style="margin-left:auto;width:15px;height:15px;border-radius:4px;border:1px solid #ddd8cc;display:flex;align-items:center;justify-content:center;font-size:9px;color:#a29e93">‹</div></div>
+            <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+            <div class="step" style="background:#e9f0fd;border:1px solid #bcd2f7"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">5</div><div class="bar" style="flex:1;background:#c7d8f7"></div></div>
+            <div class="step" style="opacity:.5"><div class="circ" style="border-style:dashed"></div><div class="bar" style="flex:1"></div></div>
+          </div>
+          <div style="flex:1;background:radial-gradient(120% 120% at 50% 34%,#ece9e2,#dcd8ce);position:relative;display:flex;align-items:center;justify-content:center">
+            <span class="lbl" style="position:absolute;top:11px;left:13px">Stage — wider</span>
+            <svg viewBox="0 0 120 200" width="94" height="156"><g stroke="#8f8b81" stroke-width="6" stroke-linecap="round" fill="none"><line x1="60" y1="54" x2="60" y2="118"/><line x1="60" y1="70" x2="34" y2="96"/><line x1="60" y1="70" x2="90" y2="88"/><line x1="60" y1="118" x2="44" y2="168"/><line x1="60" y1="118" x2="80" y2="166"/></g><circle cx="60" cy="36" r="15" fill="#8f8b81"/><ellipse cx="90" cy="88" rx="17" ry="8" fill="none" stroke="#f2503c" stroke-width="2.5"/><circle cx="90" cy="88" r="5" fill="#f2503c"/></svg>
+          </div>
+          <!-- collapsed right rail -->
+          <div style="width:38px;border-left:1px solid #e6e1d7;background:#faf9f5;padding:11px 0;display:flex;flex-direction:column;align-items:center;gap:10px">
+            <div style="width:16px;height:16px;border-radius:4px;border:1px solid #ddd8cc;display:flex;align-items:center;justify-content:center;font-size:9px;color:#a29e93">›</div>
+            <div style="width:18px;height:18px;border-radius:5px;background:#ece7dd"></div>
+            <div style="width:18px;height:18px;border-radius:5px;border:1px solid #ddd8cc"></div>
+            <div style="width:18px;height:18px;border-radius:5px;border:1px solid #ddd8cc"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "detail the drop→extract→sheet flow in <a class="dv-oid" href="#2b">2b</a>" · "show the character-sheet turnaround in the stage like <a class="dv-oid" href="#2d">2d</a>" · "how does re-rolling a version feel" · "expand the timeline <a class="dv-oid" href="#2f">2f</a> into a full-screen editor"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Workspace skeleton — three structural approaches</span></div>
+  <p class="dv-sub">All keep the locked spatial model (Process · Stage · References) and the azure signal + vermilion selection. What differs is how the rails behave and where Generate / Results / Jobs live. Low-fi on purpose — we're choosing the bones.</p>
+  <div class="dv-opts">
+
+    <!-- 1a -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a><span><b style="color:#3a3733">Fixed three-column.</b> The safe baseline — three persistent panes, nothing moves. Familiar to any DCC user.</span></div>
+      <div class="wf">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="width:1px;height:12px;background:#e0dbd1;margin:0 4px"></div><div class="bar" style="width:70px"></div><div style="margin-left:auto" class="lbl">1 job ●</div></div>
+        <div class="wf-body">
+          <!-- process -->
+          <div style="width:176px;border-right:1px solid #e6e1d7;background:#faf9f5;padding:13px 11px;display:flex;flex-direction:column;gap:3px">
+            <div class="lbl" style="margin-bottom:7px">Process</div>
+            <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+            <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+            <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+            <div class="step" style="background:#e9f0fd;border:1px solid #bcd2f7"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">4</div><div style="flex:1"><div class="bar" style="background:#c7d8f7;width:80%"></div><div class="bar" style="height:4px;width:55%;background:#4f8dff;margin-top:5px"></div></div></div>
+            <div class="step" style="opacity:.5"><div class="circ" style="border-style:dashed"></div><div class="bar" style="flex:1"></div></div>
+            <div class="step" style="opacity:.5"><div class="circ" style="border-style:dashed"></div><div class="bar" style="flex:1"></div></div>
+            <div style="margin-top:auto" class="note">versions live<br>under each step ↑</div>
+          </div>
+          <!-- stage -->
+          <div style="flex:1;background:radial-gradient(120% 120% at 50% 34%,#ece9e2,#dcd8ce);position:relative;display:flex;align-items:center;justify-content:center">
+            <span class="lbl" style="position:absolute;top:11px;left:13px">Stage</span>
+            <svg viewBox="0 0 120 200" width="82" height="136"><g stroke="#8f8b81" stroke-width="6" stroke-linecap="round" fill="none"><line x1="60" y1="54" x2="60" y2="118"/><line x1="60" y1="70" x2="34" y2="96"/><line x1="60" y1="70" x2="90" y2="88"/><line x1="60" y1="118" x2="44" y2="168"/><line x1="60" y1="118" x2="80" y2="166"/></g><circle cx="60" cy="36" r="15" fill="#8f8b81"/><ellipse cx="90" cy="88" rx="17" ry="8" fill="none" stroke="#f2503c" stroke-width="2.5"/><circle cx="90" cy="88" r="5" fill="#f2503c"/></svg>
+            <div style="position:absolute;bottom:13px;left:50%;transform:translateX(-50%);display:flex;gap:3px;padding:4px;border-radius:9px;background:#fff;border:1px solid #ddd8cc"><div class="tab">orbit</div><div class="tab on" style="background:#4f8dff;color:#fff">pose</div><div class="tab">pan</div></div>
+          </div>
+          <!-- references -->
+          <div style="width:196px;border-left:1px solid #e6e1d7;background:#faf9f5;display:flex;flex-direction:column">
+            <div style="display:flex;gap:3px;padding:11px 12px 6px"><div class="tab on">Poses</div><div class="tab">Faces</div><div class="tab">Inputs</div></div>
+            <div style="padding:8px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <div class="thumb" style="height:52px;border-color:#bcd2f7"></div><div class="thumb" style="height:52px"></div><div class="thumb" style="height:52px"></div><div class="thumb" style="height:52px"></div>
+            </div>
+            <div style="margin-top:auto;border-top:1px solid #e6e1d7;padding:11px 12px"><div class="lbl" style="margin-bottom:7px">Generate</div><div style="background:#f2efe8;border:1px solid #ddd8cc;border-radius:7px;height:34px;margin-bottom:8px"></div><div class="btn">Generate</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1b -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a><span><b style="color:#3a3733">Stage-dominant, floating rails.</b> Edge-to-edge stage; Process and References float as glass panels you can collapse to icons. Max immersion for posing.</span></div>
+      <div class="wf">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="width:1px;height:12px;background:#e0dbd1;margin:0 4px"></div><div class="bar" style="width:70px"></div><div style="margin-left:auto" class="lbl">1 job ●</div></div>
+        <div class="wf-body" style="position:relative;background:radial-gradient(120% 120% at 50% 36%,#ece9e2,#d7d3c9)">
+          <span class="lbl" style="position:absolute;top:11px;left:50%;transform:translateX(-50%)">Stage — full bleed</span>
+          <div style="flex:1;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 120 200" width="96" height="160"><g stroke="#8f8b81" stroke-width="6" stroke-linecap="round" fill="none"><line x1="60" y1="54" x2="60" y2="118"/><line x1="60" y1="70" x2="34" y2="96"/><line x1="60" y1="70" x2="90" y2="88"/><line x1="60" y1="118" x2="44" y2="168"/><line x1="60" y1="118" x2="80" y2="166"/></g><circle cx="60" cy="36" r="15" fill="#8f8b81"/><ellipse cx="34" cy="96" rx="16" ry="8" fill="none" stroke="#f2503c" stroke-width="2.5"/><circle cx="34" cy="96" r="5" fill="#f2503c"/></svg></div>
+          <!-- floating process (collapsed to icons + expanded card) -->
+          <div style="position:absolute;top:13px;left:13px;display:flex;gap:9px;align-items:flex-start">
+            <div style="width:32px;background:rgba(255,255,255,.86);border:1px solid #ddd8cc;border-radius:9px;padding:7px 0;display:flex;flex-direction:column;align-items:center;gap:8px">
+              <div class="circ" style="border-color:#8fbf7a;color:#6aa353;width:15px;height:15px">✓</div><div class="circ" style="border-color:#8fbf7a;color:#6aa353;width:15px;height:15px">✓</div><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff;width:15px;height:15px">4</div><div class="circ" style="border-style:dashed;width:15px;height:15px"></div>
+            </div>
+            <div style="width:150px;background:rgba(255,255,255,.92);border:1px solid #ddd8cc;border-radius:10px;padding:11px;box-shadow:0 6px 18px rgba(0,0,0,.1)"><div class="lbl" style="margin-bottom:8px">Mesh &amp; rig · v3</div><div class="bar" style="width:78%;margin-bottom:6px"></div><div class="bar" style="height:4px;width:55%;background:#4f8dff"></div><div style="display:flex;gap:5px;margin-top:9px"><div class="thumb" style="width:34px;height:34px;border-color:#bcd2f7"></div><div class="thumb" style="width:34px;height:34px"></div><div class="thumb" style="width:34px;height:34px"></div></div></div>
+          </div>
+          <!-- floating references -->
+          <div style="position:absolute;top:13px;right:13px;bottom:13px;width:180px;background:rgba(255,255,255,.92);border:1px solid #ddd8cc;border-radius:10px;padding:11px;box-shadow:0 6px 18px rgba(0,0,0,.1);display:flex;flex-direction:column">
+            <div style="display:flex;gap:3px;margin-bottom:9px"><div class="tab on">Poses</div><div class="tab">Faces</div></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px"><div class="thumb" style="height:46px;border-color:#bcd2f7"></div><div class="thumb" style="height:46px"></div><div class="thumb" style="height:46px"></div><div class="thumb" style="height:46px"></div></div>
+            <div style="margin-top:auto"><div class="btn">Generate</div></div>
+          </div>
+          <!-- tool dock -->
+          <div style="position:absolute;bottom:13px;left:50%;transform:translateX(-50%);display:flex;gap:3px;padding:4px;border-radius:9px;background:#fff;border:1px solid #ddd8cc"><div class="tab">orbit</div><div class="tab on" style="background:#4f8dff;color:#fff">pose</div><div class="tab">pan</div></div>
+          <div class="note blue" style="position:absolute;bottom:16px;left:15px">rails collapse →<br>pure stage</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1c -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a><span><b style="color:#3a3733">Bottom deck.</b> Process spine + stage on top; a full-width bottom deck tabs through References / Generate / Results / Jobs. Frees the right edge and grows into the animation timeline later.</span></div>
+      <div class="wf">
+        <div class="wf-top"><div style="width:8px;height:8px;border-radius:50%;background:#4f8dff"></div><span style="font:600 10px 'IBM Plex Sans';letter-spacing:.08em;color:#4a463d">POSEFORGE</span><div style="width:1px;height:12px;background:#e0dbd1;margin:0 4px"></div><div class="bar" style="width:70px"></div><div style="margin-left:auto" class="lbl">1 job ●</div></div>
+        <div style="display:flex;flex-direction:column;height:432px">
+          <div style="flex:1;display:flex;min-height:0">
+            <div style="width:158px;border-right:1px solid #e6e1d7;background:#faf9f5;padding:13px 11px;display:flex;flex-direction:column;gap:3px">
+              <div class="lbl" style="margin-bottom:7px">Process</div>
+              <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+              <div class="step"><div class="circ" style="border-color:#8fbf7a;color:#6aa353">✓</div><div class="bar" style="flex:1"></div></div>
+              <div class="step" style="background:#e9f0fd;border:1px solid #bcd2f7"><div class="circ" style="background:#4f8dff;border-color:#4f8dff;color:#fff">4</div><div class="bar" style="flex:1;background:#c7d8f7"></div></div>
+              <div class="step" style="opacity:.5"><div class="circ" style="border-style:dashed"></div><div class="bar" style="flex:1"></div></div>
+              <div class="step" style="opacity:.5"><div class="circ" style="border-style:dashed"></div><div class="bar" style="flex:1"></div></div>
+            </div>
+            <div style="flex:1;background:radial-gradient(120% 130% at 50% 32%,#ece9e2,#dcd8ce);position:relative;display:flex;align-items:center;justify-content:center">
+              <span class="lbl" style="position:absolute;top:11px;left:13px">Stage</span>
+              <svg viewBox="0 0 120 200" width="72" height="120"><g stroke="#8f8b81" stroke-width="6" stroke-linecap="round" fill="none"><line x1="60" y1="54" x2="60" y2="118"/><line x1="60" y1="70" x2="34" y2="96"/><line x1="60" y1="70" x2="90" y2="88"/><line x1="60" y1="118" x2="44" y2="168"/><line x1="60" y1="118" x2="80" y2="166"/></g><circle cx="60" cy="36" r="15" fill="#8f8b81"/><ellipse cx="90" cy="88" rx="16" ry="8" fill="none" stroke="#f2503c" stroke-width="2.5"/><circle cx="90" cy="88" r="5" fill="#f2503c"/></svg>
+              <div style="position:absolute;bottom:11px;left:50%;transform:translateX(-50%);display:flex;gap:3px;padding:4px;border-radius:9px;background:#fff;border:1px solid #ddd8cc"><div class="tab">orbit</div><div class="tab on" style="background:#4f8dff;color:#fff">pose</div><div class="tab">pan</div></div>
+            </div>
+          </div>
+          <!-- bottom deck -->
+          <div style="height:150px;border-top:1px solid #cbc6bb;background:#faf9f5;display:flex;flex-direction:column">
+            <div style="display:flex;gap:4px;padding:9px 13px 0;border-bottom:1px solid #e6e1d7"><div class="tab on">References</div><div class="tab">Generate</div><div class="tab">Results</div><div class="tab">Jobs <span style="color:#4f8dff">●</span></div></div>
+            <div style="flex:1;padding:12px 13px;display:flex;gap:10px;align-items:center;overflow:hidden">
+              <div class="thumb" style="width:96px;height:100%;border-color:#bcd2f7"></div><div class="thumb" style="width:96px;height:100%"></div><div class="thumb" style="width:96px;height:100%"></div><div class="thumb" style="width:96px;height:100%"></div>
+              <div class="thumb" style="width:96px;height:100%;border-style:dashed;color:#a29e93;font:500 15px 'Caveat'">+ re-roll</div>
+              <div class="note" style="margin-left:auto;text-align:right">deck becomes the<br>animation timeline →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "drill into <a class="dv-oid" href="#1a">1a</a>'s pose-editing interaction" · "how does version-switching work in <a class="dv-oid" href="#1c">1c</a>" · "combine <a class="dv-oid" href="#1b">1b</a> immersion with <a class="dv-oid" href="#1c">1c</a>'s deck" · "new directions for the left rail"</p>
+</section>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "mirror": "https://raw.githubusercontent.com/una-dinosauria/cmu-mocap/master/data",
+  "comment": "Curated CMU mocap picks (subject_trial per the CMU index). `t` = seconds into the motion for static poses; clips are [start, end] seconds sampled every `step`. Regenerate lib/mocap/pack.json with: node scripts/fetch-cmu.mjs && node scripts/build-mocap-pack.mjs",
+  "poses": [
+    { "id": "cmu-stand", "name": "Standing", "section": "stance", "tags": ["stand", "idle"], "file": "14_06", "t": 0 },
+    { "id": "cmu-sit-relaxed", "name": "Sit, Relaxed", "section": "stance", "tags": ["sit", "relaxed", "rest"], "file": "13_01", "t": 16 },
+    { "id": "cmu-guard", "name": "Boxing Guard", "section": "stance", "tags": ["combat"], "file": "14_01", "t": 2 },
+    { "id": "cmu-sword", "name": "Sword Stance", "section": "stance", "tags": ["combat"], "file": "02_07", "t": 2 },
+    { "id": "cmu-squat", "name": "Deep Squat", "section": "stance", "tags": ["exercise"], "file": "14_06", "t": 12 },
+    { "id": "cmu-reach", "name": "Reach Up", "section": "action", "tags": ["reach", "stretch"], "file": "13_10", "t": 2 },
+    { "id": "cmu-strike", "name": "Strike", "section": "action", "tags": ["combat"], "file": "02_05", "t": 13 },
+    { "id": "cmu-raised-fist", "name": "Raised Fist", "section": "action", "tags": ["combat", "gesture"], "file": "02_05", "t": 3 },
+    { "id": "cmu-kick", "name": "Kick", "section": "action", "tags": ["combat", "sport"], "file": "10_01", "t": 4.8 },
+    { "id": "cmu-arabesque", "name": "Arabesque", "section": "action", "tags": ["dance"], "file": "05_10", "t": 3 },
+    { "id": "cmu-arms-high", "name": "Arms Held High", "section": "action", "tags": ["dance"], "file": "49_09", "t": 2 },
+    { "id": "cmu-golf-swing", "name": "Golf Backswing", "section": "action", "tags": ["sport"], "file": "64_01", "t": 2 },
+    { "id": "cmu-laugh", "name": "Laugh", "section": "action", "tags": ["gesture"], "file": "13_14", "t": 2 },
+    { "id": "cmu-point", "name": "Point", "section": "action", "tags": ["gesture"], "file": "13_26", "t": 21 },
+    { "id": "cmu-wave-big", "name": "Big Wave", "section": "action", "tags": ["gesture"], "file": "13_26", "t": 2 },
+    { "id": "cmu-walk-stride", "name": "Walk Stride", "section": "action", "tags": ["locomotion"], "file": "02_01", "t": 2 },
+    { "id": "cmu-run-stride", "name": "Run Stride", "section": "action", "tags": ["locomotion"], "file": "02_03", "t": 1.5 },
+    { "id": "cmu-jump-windup", "name": "Jump Wind-Up", "section": "action", "tags": ["action"], "file": "13_11", "t": 1.8 },
+    { "id": "cmu-jump-air", "name": "Jump", "section": "action", "tags": ["action"], "file": "13_11", "t": 2.2 },
+    { "id": "cmu-star", "name": "Jumping Jack", "section": "action", "tags": ["exercise"], "file": "13_29", "t": 2 },
+    { "id": "cmu-toe-touch", "name": "Touch Toes", "section": "action", "tags": ["exercise", "stretch"], "file": "13_29", "t": 19 },
+    { "id": "cmu-side-stretch", "name": "Side Stretch", "section": "action", "tags": ["exercise", "stretch"], "file": "14_06", "t": 24 },
+    { "id": "cmu-twist", "name": "Twist", "section": "action", "tags": ["exercise"], "file": "14_06", "t": 29 }
+  ],
+  "clips": [
+    { "id": "cmu-clip-walk", "name": "Walk", "tags": ["locomotion"], "file": "02_01", "start": 1, "end": 4, "step": 0.5 },
+    { "id": "cmu-clip-run", "name": "Run", "tags": ["locomotion"], "file": "02_03", "start": 1, "end": 3, "step": 0.4 },
+    { "id": "cmu-clip-jump", "name": "Forward Jump", "tags": ["action"], "file": "13_11", "start": 1, "end": 3, "step": 0.25 },
+    { "id": "cmu-clip-boxing", "name": "Boxing", "tags": ["combat"], "file": "14_01", "start": 1, "end": 5, "step": 0.5 },
+    { "id": "cmu-clip-kick", "name": "Kick", "tags": ["combat", "sport"], "file": "10_01", "start": 4, "end": 6, "step": 0.25 },
+    { "id": "cmu-clip-dance", "name": "Dance", "tags": ["dance"], "file": "05_02", "start": 1, "end": 5, "step": 0.5 },
+    { "id": "cmu-clip-salsa", "name": "Salsa", "tags": ["dance"], "file": "60_01", "start": 2, "end": 6, "step": 0.5 },
+    { "id": "cmu-clip-jacks", "name": "Jumping Jacks", "tags": ["exercise"], "file": "13_29", "start": 1, "end": 4, "step": 0.4 },
+    { "id": "cmu-clip-wave", "name": "Direct Traffic", "tags": ["gesture"], "file": "13_26", "start": 1, "end": 5, "step": 0.5 },
+    { "id": "cmu-clip-golf", "name": "Golf Swing", "tags": ["sport"], "file": "64_01", "start": 1, "end": 4, "step": 0.4 },
+    { "id": "cmu-clip-bow", "name": "Bow", "tags": ["gesture"], "file": "111_02", "start": 0.5, "end": 3.5, "step": 0.5 },
+    { "id": "cmu-clip-sit", "name": "Sit Down, Stand Up", "tags": ["everyday"], "file": "13_01", "start": 1, "end": 6, "step": 0.5 }
+  ]
+}

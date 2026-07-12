@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest an idea or a new capability for Poseforge
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! Describing the **workflow** you're trying to unlock (not just the feature) helps us find the best solution.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The workflow or problem this would solve. What's painful or impossible today?
+      placeholder: "I want to … but currently I have to …"
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What you'd like to see. UI, behavior, or API — however concrete you can be.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any workarounds you use today, or other approaches you thought about.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Pipeline (source → mesh & rig)
+        - Pose editor / libraries
+        - Timeline / animation
+        - Generation (image / video)
+        - Composition / worlds
+        - Assets / bundles / export
+        - Providers / new integrations
+        - Performance
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I've searched existing issues and the ROADMAP, and this isn't already covered
+          required: true

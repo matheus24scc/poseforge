@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Roadmap
+    url: https://github.com/wolfgangjblack/poseforge/blob/main/ROADMAP.md
+    about: Check what's already planned or in progress before filing.
+  - name: Questions & discussion
+    url: https://github.com/wolfgangjblack/poseforge/discussions
+    about: For usage questions, ideas, and general discussion (enable Discussions in repo settings).

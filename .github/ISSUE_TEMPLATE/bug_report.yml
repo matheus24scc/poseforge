@@ -1,0 +1,80 @@
+name: Bug report
+description: Something in Poseforge isn't working as expected
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill in as much as you can — it makes fixing it much faster.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you were doing.
+      placeholder: When I clicked "Rig character" on the Mesh & rig step, …
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The exact steps so we can see it too.
+      placeholder: |
+        1. Create a new project
+        2. Upload a rigged GLB
+        3. Go to the Pose step
+        4. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Which part of the app?
+      description: Where in the pipeline did it occur?
+      options:
+        - Launcher / projects
+        - Source / Extract / Character sheet
+        - 3D mesh & rig
+        - Pose editor
+        - Timeline / animation
+        - Generate (stills)
+        - Compose (multi-character / worlds)
+        - Assets / bundles / export
+        - Other / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: Errors
+      description: Paste any error text from the in-app **Jobs** tray and/or the browser console (DevTools → Console). This is often the most useful part.
+      render: shell
+  - type: input
+    id: env
+    attributes:
+      label: Browser & OS
+      placeholder: "Chrome 126 on macOS 14 / Firefox 128 on Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (optional)
+      description: Drag images in if they help show the problem.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I've searched existing issues and this isn't a duplicate
+          required: true
+        - label: This is a bug in Poseforge itself, not a provider (Gemini/Meshy) outage or billing issue
+          required: false
