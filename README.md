@@ -217,6 +217,15 @@ The full pipeline works end-to-end on real keys: source → extract → 3-view s
 > rigged GLB in place of a Meshy-generated character, so you can see the pose,
 > animation, and composition tools without spending any provider credits.
 
+### Status (checkup 2026-08-18)
+> Revisado na campanha de repo-checkup. Relatorio completo: `~/repo-checkup/reports/poseforge.md` (local do mantenedor, nao no repo).
+- **Build/Install**: PASS — `npm ci` RC=0 (118 pacotes); `npm run build` compila (Next.js 15.5.23, 9 rotas estaticas); `npm run typecheck` (`tsc --noEmit`) RC=0.
+- **Smoke test**: N/A (sem script de teste; build gera 9 rotas estaticas; typecheck RC=0).
+- **Para rodar de ponta-a-ponta precisa de**: chaves de API Gemini/Meshy (rotas proxy stateless, nao persistidas); nenhum servico externo obrigatorio para o build.
+- **Inconsistencias conhecidas (README vs codigo)**: `.gitignore` ignorava `.github/workflows/ci.yml` (corrigido no checkup).
+- **Seguranca**: 3 high (`next`, `postcss`, `sharp`) exigem `next@16.3.1` (BREAKING) -> NAO aplicado (decisao humana); 1 high (`nanoid`) resolvida por `npm audit fix` nao-force. Secret scan: 0 hits.
+- **Estado resumido**: build verde (Next 15.5.23) + typecheck; ESLint ausente (warning nao fatal); 3 high pendentes (upgrade breaking do Next).
+
 ---
 
 ## Contributing
