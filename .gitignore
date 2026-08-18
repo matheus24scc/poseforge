@@ -9,4 +9,3 @@ next-env.d.ts
 npm-debug.log*
 scripts/.cmu-cache/
 
-.github/workflows/ci.yml
